@@ -10,8 +10,8 @@ function App() {
   const id = 'nav';
   const logo = "React Blog";
 
-  let [titleList, b] = useState(["남자 코트 추천", "강남 우동맛집", "파이썬 독학"]);
-
+  let [titleList, setTitleList] = useState(["남자 코트 추천", "강남 우동맛집", "파이썬 독학"]);
+  let[likeIt, setLikeIt] = useState(0)
 
   return (
     <div className="App">
@@ -21,7 +21,7 @@ function App() {
       {
       titleList.map( title => (
         <div className="list">
-          <h4>{title}</h4>
+          <h4>{title} <span onClick={() => {setLikeIt(likeIt + 1)}}>👍</span> {likeIt} </h4>
           <p>10월 6일 발행</p>
         </div>
       ))
