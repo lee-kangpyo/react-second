@@ -18,6 +18,10 @@ function App() {
       <div className="black-nav">
         <h4 id={id} style={ {color:"red", fontSize:"16px"} }>{ logo }</h4>
       </div>
+      <button onClick={() => {
+        let copy = [...titleList];
+        setTitleList(copy.sort());
+        }}>정렬</button>
       {
       titleList.map( title => (
         <div className="list">
