@@ -11,8 +11,8 @@ function App() {
   const logo = "React Blog";
 
   let [titleList, setTitleList] = useState(["남자 코트 추천", "강남 우동맛집", "파이썬 독학"]);
-  let[likeIt, setLikeIt] = useState(0)
-
+  let [likeIt, setLikeIt] = useState(0)
+  let [isModalOpen, setModalState] = useState(false);
   return (
     <div className="App">
       <div className="black-nav">
@@ -23,14 +23,31 @@ function App() {
         setTitleList(copy.sort());
         }}>정렬</button>
       {
+        
       titleList.map( title => (
         <div className="list">
-          <h4>{title} <span onClick={() => {setLikeIt(likeIt + 1)}}>👍</span> {likeIt} </h4>
+          <h4 onClick={() => {setModalState(true)} }>{title} <span onClick={() => {setLikeIt(likeIt + 1)}}>👍</span> {likeIt} </h4>
           <p>10월 6일 발행</p>
         </div>
       ))
       }
+      {
+        isModalOpen ? <Detail setModal={setModalState}/> : null
+      }
+      
     </div>
+  );
+}
+
+function Detail(){
+  return(
+    <>
+      <div className='detail'>
+        <h4 >제목</h4>
+        <p>날짜</p>
+        <p>tkdtpsodyd</p>
+      </div>
+    </>
   );
 }
 
