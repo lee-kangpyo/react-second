@@ -11,7 +11,7 @@ function App() {
   const logo = "React Blog";
 
   let [titleList, setTitleList] = useState(["남자 코트 추천", "강남 우동맛집", "파이썬 독학"]);
-  let [likeIt, setLikeIt] = useState(0)
+  let [likeIt, setLikeIt] = useState([0,0,0])
   let [isModalOpen, setModalState] = useState(false);
   return (
     <div className="App">
@@ -24,9 +24,11 @@ function App() {
         }}>정렬</button>
       {
         
-      titleList.map( title => (
-        <div className="list">
-          <h4 onClick={() => {setModalState(true)} }>{title} <span onClick={() => {setLikeIt(likeIt + 1)}}>👍</span> {likeIt} </h4>
+      titleList.map( (title, idx) => (
+        <div className="list" key ={idx}>
+          <h4 onClick={() => {setModalState(true)} }>{title} 
+            <span onClick={()=>{chuchun(likeIt, idx, setLikeIt)}}>👍</span> {likeIt[idx]} 
+          </h4>
           <p>10월 6일 발행</p>
         </div>
       ))
@@ -37,6 +39,11 @@ function App() {
       
     </div>
   );
+}
+
+function chuchun(likeIt, idx, setLikeIt){
+  likeIt[idx] = likeIt[idx] + 1;
+  setLikeIt([...likeIt])
 }
 
 function Detail(){
