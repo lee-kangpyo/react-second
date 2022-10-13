@@ -34,11 +34,16 @@ function App() {
       ))
       }
       {
-        isModalOpen ? <Detail title={titleList} color='skyblue'/> : null
+        isModalOpen ? <Detail title={titleList} color='skyblue' onbtnClick={onbtnClick}/> : null
       }
       
     </div>
   );
+
+  function onbtnClick(){
+    titleList[0] = "여자 코트 추천";
+    setTitleList([...titleList])
+  }
 }
 
 function chuchun(likeIt, idx, setLikeIt){
@@ -53,7 +58,7 @@ function Detail(props){
         <h4 >{props.title[0]}</h4>
         <p>날짜</p>
         <p>상세내용</p>
-        <button>글수정</button>
+        <button onClick={props.onbtnClick}>글수정</button>
       </div>
     </>
   );
