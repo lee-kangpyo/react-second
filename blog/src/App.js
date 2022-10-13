@@ -34,7 +34,7 @@ function App() {
       ))
       }
       {
-        isModalOpen ? <Detail setModal={setModalState}/> : null
+        isModalOpen ? <Detail title={titleList} color='skyblue'/> : null
       }
       
     </div>
@@ -46,13 +46,14 @@ function chuchun(likeIt, idx, setLikeIt){
   setLikeIt([...likeIt])
 }
 
-function Detail(){
+function Detail(props){
   return(
     <>
-      <div className='detail'>
-        <h4 >제목</h4>
+      <div className='detail' style={{background:props.color}}>
+        <h4 >{props.title[0]}</h4>
         <p>날짜</p>
-        <p>tkdtpsodyd</p>
+        <p>상세내용</p>
+        <button>글수정</button>
       </div>
     </>
   );
