@@ -11,6 +11,7 @@ function App() {
   const logo = "React Blog";
 
   let [titleList, setTitleList] = useState(["남자 코트 추천", "강남 우동맛집", "파이썬 독학"]);
+  let [titleIdx, settitleIdx] = useState(0);
   let [likeIt, setLikeIt] = useState([0,0,0])
   let [isModalOpen, setModalState] = useState(false);
   return (
@@ -26,7 +27,8 @@ function App() {
         
       titleList.map( (title, idx) => (
         <div className="list" key ={idx}>
-          <h4 onClick={() => {setModalState(true)} }>{title} 
+          <h4 onClick={() => {setModalState(true); settitleIdx(idx)} }>
+            {title} 
             <span onClick={()=>{chuchun(likeIt, idx, setLikeIt)}}>👍</span> {likeIt[idx]} 
           </h4>
           <p>10월 6일 발행</p>
@@ -34,7 +36,7 @@ function App() {
       ))
       }
       {
-        isModalOpen ? <Detail title={titleList} color='skyblue' onbtnClick={onbtnClick}/> : null
+        isModalOpen ? <Detail title={titleList[titleIdx]} color='skyblue' onbtnClick={onbtnClick}/> : null
       }
       
     </div>
@@ -55,7 +57,7 @@ function Detail(props){
   return(
     <>
       <div className='detail' style={{background:props.color}}>
-        <h4 >{props.title[0]}</h4>
+        <h4 >{props.title}</h4>
         <p>날짜</p>
         <p>상세내용</p>
         <button onClick={props.onbtnClick}>글수정</button>
