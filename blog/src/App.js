@@ -14,6 +14,7 @@ function App() {
   let [titleIdx, settitleIdx] = useState(0);
   let [likeIt, setLikeIt] = useState([0,0,0])
   let [isModalOpen, setModalState] = useState(false);
+  let [inputVal, setinputVal] = useState("");
   return (
     <div className="App">
       <div className="black-nav">
@@ -29,12 +30,15 @@ function App() {
         <div className="list" key ={idx}>
           <h4 onClick={() => {setModalState(true); settitleIdx(idx)} }>
             {title} 
-            <span onClick={()=>{chuchun(likeIt, idx, setLikeIt)}}>👍</span> {likeIt[idx]} 
+            <span onClick={(e)=>{e.stopPropagation();chuchun(likeIt, idx, setLikeIt)}}>👍</span> {likeIt[idx]} 
+            <button onClick={()=>{onDelBtnClick(idx)}}>삭제</button>
           </h4>
           <p>10월 6일 발행</p>
         </div>
       ))
       }
+      <input onChange={(e)=>{setinputVal(e.target.value)}} />
+      <button onClick={onAddBtnClick}>입력</button>
       {
         isModalOpen ? <Detail title={titleList[titleIdx]} color='skyblue' onbtnClick={onbtnClick}/> : null
       }
@@ -42,6 +46,19 @@ function App() {
     </div>
   );
 
+  function onDelBtnClick(idx){
+    var newtitleList = titleList.filter(function(val, i){
+      if(i !== idx) return val
+    });
+    likeIt.splice(idx, 1);
+    
+    setTitleList([...newtitleList])
+    setLikeIt([...likeIt])
+  }
+  function onAddBtnClick(){
+    setTitleList([inputVal, ...titleList])
+    setLikeIt([0, ...likeIt])
+  }
   function onbtnClick(){
     titleList[0] = "여자 코트 추천";
     setTitleList([...titleList])
