@@ -10,7 +10,7 @@ function App() {
   const id = 'nav';
   const logo = "React Blog";
 
-  let [titleList, setTitleList] = useState(["남자 코트 추천", "강남 우동맛집", "파이썬 독학"]);
+  let [titleList, setTitleList] = useState([{"title":"남자 코트 추천", "ymd":"2022년 10월 6일"}, {"title":"강남 우동맛집", "ymd":"2022년 10월 6일"}, {"title":"파이썬 독학", "ymd":"2022년 10월 6일"}]);
   let [titleIdx, settitleIdx] = useState(0);
   let [likeIt, setLikeIt] = useState([0,0,0])
   let [isModalOpen, setModalState] = useState(false);
@@ -21,32 +21,40 @@ function App() {
         <h4 id={id} style={ {color:"red", fontSize:"16px"} }>{ logo }</h4>
       </div>
       <button onClick={() => {
-        let copy = [...titleList];
-        setTitleList(copy.sort());
+            let copy = [...titleList];
+            setTitleList(copy.sort(function(a, b){
+              if (a.title > b.title) {
+                return 1;
+              }
+              if (a.title < b.title) {
+                return -1;
+              }
+              return 0;
+            }));
         }}>정렬</button>
       {
-        
-      titleList.map( (title, idx) => (
+      titleList.map( (item, idx) => (
         <div className="list" key ={idx}>
           <h4 onClick={() => {setModalState(true); settitleIdx(idx)} }>
-            {title} 
+            {item.title} 
             <span onClick={(e)=>{e.stopPropagation();chuchun(likeIt, idx, setLikeIt)}}>👍</span> {likeIt[idx]} 
-            <button onClick={()=>{onDelBtnClick(idx)}}>삭제</button>
+            <button onClick={(e)=>{e.stopPropagation();onDelBtnClick(idx)}}>삭제</button>
           </h4>
-          <p>10월 6일 발행</p>
+          <p>{item.ymd}</p>
         </div>
       ))
       }
       <input onChange={(e)=>{setinputVal(e.target.value)}} />
       <button onClick={onAddBtnClick}>입력</button>
       {
-        isModalOpen ? <Detail title={titleList[titleIdx]} color='skyblue' onbtnClick={onbtnClick}/> : null
+        isModalOpen ? <Detail ymd={titleList[titleIdx].ymd} title={titleList[titleIdx].title} color='skyblue' onbtnClick={onbtnClick}/> : null
       }
       
     </div>
   );
 
   function onDelBtnClick(idx){
+    setModalState(false);
     var newtitleList = titleList.filter(function(val, i){
       if(i !== idx) return val
     });
@@ -54,13 +62,20 @@ function App() {
     
     setTitleList([...newtitleList])
     setLikeIt([...likeIt])
+    settitleIdx(0)
   }
   function onAddBtnClick(){
-    setTitleList([inputVal, ...titleList])
-    setLikeIt([0, ...likeIt])
+    if(inputVal){
+      let today = new Date();  
+      setTitleList([{title:inputVal, ymd:today.getFullYear()+"년 "+String(today.getMonth()+1)+"월 "+today.getDate()+"일"}, ...titleList])
+      setLikeIt([0, ...likeIt])
+    }else{
+      alert("값을 입력해주세요")
+    }
+    
   }
   function onbtnClick(){
-    titleList[0] = "여자 코트 추천";
+    titleList[0].title = "여자 코트 추천";
     setTitleList([...titleList])
   }
 }
@@ -75,7 +90,7 @@ function Detail(props){
     <>
       <div className='detail' style={{background:props.color}}>
         <h4 >{props.title}</h4>
-        <p>날짜</p>
+        <p>{props.ymd}</p>
         <p>상세내용</p>
         <button onClick={props.onbtnClick}>글수정</button>
       </div>
