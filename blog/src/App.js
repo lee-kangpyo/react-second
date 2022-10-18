@@ -50,7 +50,9 @@ function App() {
         isModalOpen ? <Detail ymd={titleList[titleIdx].ymd} title={titleList[titleIdx].title} color='skyblue' onbtnClick={onbtnClick}/> : null
       }
       
+      <Modal />
     </div>
+    
   );
 
   function onDelBtnClick(idx){
@@ -96,6 +98,27 @@ function Detail(props){
       </div>
     </>
   );
+}
+
+class Modal extends React.Component{
+  constructor(props){     //부모 요소에서 보내는 값은 여기서props
+    super(props);
+    this.state = {
+      name:"kim",
+      age:100,
+    }
+  }
+
+  render(){
+    return(
+      <>
+        <div>클래스형 컴포넌트 {this.state.name} {this.state.age}</div>
+        <button onClick={()=>{
+          this.setState({age:10});
+        }}>버튼</button>
+      </>
+    )
+  }
 }
 
 export default App;
