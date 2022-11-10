@@ -1,5 +1,21 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import styled from "styled-components";
+
+let CustomBtn = styled.button`
+    background : ${ props => props.bg };
+    color : ${ props => props.bg == 'blue' ? 'white' : 'black' };
+    padding : 10px;
+`
+
+let NewBtn = styled.button(CustomBtn)`
+    padding : 130px;
+`
+
+let BlackBox = styled.div`
+    background : grey;
+    padding : 20px;
+`
 
 function Detail(props) {
     let {id} = useParams();
@@ -10,6 +26,11 @@ function Detail(props) {
     }else{
         return(
             <div className='container'>
+                <BlackBox>
+                    <NewBtn bg="yellow">버튼</NewBtn>
+                    <CustomBtn bg="red">버튼</CustomBtn>
+                    <CustomBtn bg="blue">버튼</CustomBtn>
+                </BlackBox>
                 <div className='row'>
                     <div className='col-md-6'>
                         <img src={process.env.PUBLIC_URL + "/shoes"+(Number(id)+1)+".jpg"} width="100%"/>
