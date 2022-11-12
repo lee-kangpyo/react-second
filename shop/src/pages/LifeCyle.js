@@ -11,13 +11,17 @@ function LifeCyle (){
     let [count, setCount] = useState(0);
 
     useEffect(() => {
-        changeBox()
-    });
+        let a = changeBox()
+        return ()=>{
+          clearTimeout(a)
+        }
+        
+    }, []);
 
     function changeBox(){
-        setTimeout(() => {
+        return setTimeout(() => {
             setShow(!isShow);
-        }, 300)
+        }, 2000)
     }
 
     return (
