@@ -10,6 +10,7 @@ import Item from './component/Item'
 import { Routes, Route, Link, useNavigate, Outlet } from "react-router-dom";
 import Main from './pages/Main';
 import Detail from './pages/Detail';
+import LifeCyle from './pages/LifeCyle';
 
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
           </Route>
           <Route path='location' element={<div>회사위치</div>} />
         </Route>
+        <Route path='/lifeCyle' element={<LifeCyle />} />
         <Route path='*' element={<div>404 error 없는 페이지입니다.</div>} />
 
       </Routes>

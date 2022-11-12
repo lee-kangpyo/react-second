@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import styled from "styled-components";
 
@@ -8,8 +8,8 @@ let CustomBtn = styled.button`
     padding : 10px;
 `
 
-let NewBtn = styled.button(CustomBtn)`
-    padding : 130px;
+let NewBtn = styled(CustomBtn)`
+    padding : 30px;
 `
 
 let BlackBox = styled.div`
