@@ -3,7 +3,7 @@ import '../App.css';
 import { Container, Row } from 'react-bootstrap';
 import bg from '../img/bg.jpg';
 import Item from './../component/Item';
-
+import axious from "axios";
 function Main(props){
     return(
         <>
@@ -17,6 +17,16 @@ function Main(props){
             }
             </Row>
         </Container>
+        <button onClick={()=>{
+            axious.get('https://codingapple1.github.io/shop/data2.json')
+            .then((result)=>{ 
+                console.log(result.data);
+            })
+            .catch(() => {
+                console.log("ajax 요청이 실패했습니다.")
+            })
+
+        }}>버튼</button>
         </>
     )
 }
