@@ -15,10 +15,12 @@ import LifeCyle from './pages/LifeCyle';
 
 function App() {
 
-  let [shoes] = useState(shoesInfo);
+  let [shoes, setShoes] = useState(shoesInfo);
   
   //페이지 이동을 도와주는 훅
   let navigate = useNavigate();
+
+
 
   return (
     <div className="App">
@@ -35,10 +37,9 @@ function App() {
 
       <Link to="/">홈으로 이동</Link>
 
-
       <Routes>
-        <Route path='/' element={<Main shoes={shoes} />}/>
-        <Route path='/detail/:id' element={<Detail shoes={shoes}/>} />
+        <Route path='/' element={<Main shoes={shoes} onAddShoes={onAddShoes} />}/>
+        <Route path='/detail/:id' element={<Detail shoes={shoes} />} />
         <Route path='/about' element={<About />} >
           <Route path='member' element={<><Outlet></Outlet><div>멤버소개</div></>}>
             <Route path='deep' element={<div>2중</div>} />
@@ -47,12 +48,18 @@ function App() {
         </Route>
         <Route path='/lifeCyle' element={<LifeCyle />} />
         <Route path='*' element={<div>404 error 없는 페이지입니다.</div>} />
-
       </Routes>
       
     </div>
   );
+
+  function onAddShoes(shoesInfo){
+    setShoes([...shoes, ...shoesInfo])
+  }
 }
+
+
+
 
 function About(){
   return(
