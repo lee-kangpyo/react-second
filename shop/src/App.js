@@ -11,11 +11,14 @@ import { Routes, Route, Link, useNavigate, Outlet } from "react-router-dom";
 import Main from './pages/Main';
 import Detail from './pages/Detail';
 import LifeCyle from './pages/LifeCyle';
+import Loading from './component/Loading';
 
 
 function App() {
 
   let [shoes, setShoes] = useState(shoesInfo);
+  let [num, setNum] = useState(2);
+  let [isLoadingShow, setLoadingShow] = useState(false);
   
   //페이지 이동을 도와주는 훅
   let navigate = useNavigate();
@@ -38,7 +41,7 @@ function App() {
       <Link to="/">홈으로 이동</Link>
 
       <Routes>
-        <Route path='/' element={<Main shoes={shoes} onAddShoes={onAddShoes} />}/>
+        <Route path='/' element={<Main shoes={shoes} onAddShoes={onAddShoes} useNumState={[num, setNum]} setLoadingShow={setLoadingShow} />}/>
         <Route path='/detail/:id' element={<Detail shoes={shoes} />} />
         <Route path='/about' element={<About />} >
           <Route path='member' element={<><Outlet></Outlet><div>멤버소개</div></>}>
@@ -50,6 +53,7 @@ function App() {
         <Route path='*' element={<div>404 error 없는 페이지입니다.</div>} />
       </Routes>
       
+      <Loading isShow = {isLoadingShow} />
     </div>
   );
 
