@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import styled from "styled-components";
+import Nav from 'react-bootstrap/Nav';
 
 let CustomBtn = styled.button`
     background : ${ props => props.bg };
@@ -19,8 +20,11 @@ let BlackBox = styled.div`
 
 function Detail(props) {
     let {id} = useParams();
+    let [tapNum, setTapNum] = useState(0);
+
     const shoes = props.shoes.filter((el) => el.id == id);
     const isEmpty = shoes.length == 0;
+
     if(isEmpty){
         return <div className='container'>해당하는 상품이 없습니다.</div>
     }else{
@@ -42,10 +46,43 @@ function Detail(props) {
                         <button className='btn btn-danger'>주문하기</button>
                     </div>
                 </div>
+                <Tabs setTapNum={setTapNum}/>
+                <TabContents tapNum={tapNum} />
             </div>
         );
     }
 
+    
+}
+
+function Tabs({setTapNum}) {
+    return (
+        <>
+            <Nav variant="tabs" defaultActiveKey="link-0">
+            <Nav.Item>
+                <Nav.Link onClick={() => {setTapNum(0)}} eventKey="link-0" >버튼1</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+                <Nav.Link onClick={() => {setTapNum(1)}} eventKey="link-1" >버튼 2</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+                <Nav.Link onClick={() => {setTapNum(2)}} eventKey="link-2" >버튼3</Nav.Link>
+            </Nav.Item>
+            </Nav>
+            
+        </>
+    );
+}
+function TabContents({tapNum}){
+    /*if(tapNum === 0){
+        return <div>내용1</div>;
+    }else if(tapNum === 1){
+        return <div>내용2</div>;
+    }else if(tapNum === 2){
+        return <div>내용3</div>;
+    }
+    */
+    return [<div>내용1</div>, <div>내용2</div>, <div>내용3</div>][tapNum]
 }
 
 export default Detail;

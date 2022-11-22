@@ -38,6 +38,19 @@ function Main(props){
                     alert("더 이상 상품이 없음")
                     setNum(num+1);
                 }
+
+                //post 전송하는법
+                /*
+                axious.post('/url', {name:"lee"});
+
+                Promise.all([axious.get("/url1"), axious.get("/url2") ])
+                .then(()=>{
+                    // 두 요청이 성공했을때 실행
+                })
+                // JSON 데이터는 문자취급을 받아서 http 요청으로 주고받을수 있음
+                */
+
+                
             }}>더보기</button>
         }
         </>
