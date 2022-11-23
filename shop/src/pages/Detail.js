@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import styled from "styled-components";
 import Nav from 'react-bootstrap/Nav';
@@ -82,7 +82,26 @@ function TabContents({tapNum}){
         return <div>내용3</div>;
     }
     */
-    return [<div>내용1</div>, <div>내용2</div>, <div>내용3</div>][tapNum]
+    let [fade, setFade] = useState("")
+    useEffect(() => {
+        // automatic batching 으로 setState 실행시점이 비슷하면 스테이트 변경만하고 가장 마지막에 재렌더링 하는 기능
+        // timout으로 조금 후에 실행해줘야 제대로 작동함.
+        let a = setTimeout(() => {setFade('end')}, 100)
+        return () => {
+            clearTimeout(a);
+            setFade('');
+        }
+    }, [tapNum])
+
+    // className={'start ' + fade} 
+    // className={`start ${fade}`}> 백틱으로 가능
+    return (
+        <div className={'start ' + fade}>   
+        {
+            [<div>내용1</div>, <div>내용2</div>, <div>내용3</div>][tapNum]
+        }
+        </div>
+    )
 }
 
 export default Detail;
