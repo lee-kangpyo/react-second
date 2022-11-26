@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import styled from "styled-components";
 import Nav from 'react-bootstrap/Nav';
+ 
+import {Context1} from './../App.js'
 
 let CustomBtn = styled.button`
     background : ${ props => props.bg };
@@ -19,6 +21,8 @@ let BlackBox = styled.div`
 `
 
 function Detail(props) {
+
+
     let {id} = useParams();
     let [tapNum, setTapNum] = useState(0);
 
@@ -74,6 +78,9 @@ function Tabs({setTapNum}) {
     );
 }
 function TabContents({tapNum}){
+    
+    let {stock, shoes} = useContext(Context1);
+
     /*if(tapNum === 0){
         return <div>내용1</div>;
     }else if(tapNum === 1){
@@ -98,7 +105,7 @@ function TabContents({tapNum}){
     return (
         <div className={'start ' + fade}>   
         {
-            [<div>내용1</div>, <div>내용2</div>, <div>내용3</div>][tapNum]
+            [<div>{stock}</div>, <div>내용2</div>, <div>내용3</div>][tapNum]
         }
         </div>
     )

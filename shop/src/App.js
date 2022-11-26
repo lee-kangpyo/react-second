@@ -2,7 +2,7 @@ import {  Container, Nav, Navbar, Row  } from 'react-bootstrap';
 import './App.css';
 
 
-import React, { useState } from 'react';
+import React, { createContext, useState } from 'react';
 
 import shoesInfo from './data.js'
 import Item from './component/Item'
@@ -13,10 +13,12 @@ import Detail from './pages/Detail';
 import LifeCyle from './pages/LifeCyle';
 import Loading from './component/Loading';
 
+export let Context1 = createContext();
 
 function App() {
 
   let [shoes, setShoes] = useState(shoesInfo);
+  let [stock] = useState([10, 11, 12])
   let [num, setNum] = useState(2);
   let [isLoadingShow, setLoadingShow] = useState(false);
   
@@ -42,7 +44,12 @@ function App() {
 
       <Routes>
         <Route path='/' element={<Main shoes={shoes} onAddShoes={onAddShoes} useNumState={[num, setNum]} setLoadingShow={setLoadingShow} />}/>
-        <Route path='/detail/:id' element={<Detail shoes={shoes} />} />
+        <Route path='/detail/:id' element={
+            <Context1.Provider value={{stock, shoes}}>
+              <Detail shoes={shoes} />
+            </Context1.Provider>
+        } />
+        
         <Route path='/about' element={<About />} >
           <Route path='member' element={<><Outlet></Outlet><div>멤버소개</div></>}>
             <Route path='deep' element={<div>2중</div>} />
