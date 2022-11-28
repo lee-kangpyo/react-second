@@ -11,7 +11,10 @@ import { Routes, Route, Link, useNavigate, Outlet } from "react-router-dom";
 import Main from './pages/Main';
 import Detail from './pages/Detail';
 import LifeCyle from './pages/LifeCyle';
+import Cart from './pages/Cart';
+
 import Loading from './component/Loading';
+
 
 export let Context1 = createContext();
 
@@ -49,7 +52,7 @@ function App() {
               <Detail shoes={shoes} />
             </Context1.Provider>
         } />
-        
+        <Route path="/cart" element={<Cart />}/>
         <Route path='/about' element={<About />} >
           <Route path='member' element={<><Outlet></Outlet><div>멤버소개</div></>}>
             <Route path='deep' element={<div>2중</div>} />
