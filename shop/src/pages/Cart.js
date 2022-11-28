@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import { Table } from 'react-bootstrap';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { addCount } from '../store';
 
 function Cart(){
-
+    let user = useSelector((state) => state.user);
     let cartList = useSelector((state) => state.cartList);
-    console.log(cartList);
+    let dispatch = useDispatch();
 
     return(
         <>
+            <div>{user}의 장바구니</div>
              <Table>
                 <thead>
                     <tr>
@@ -21,11 +23,11 @@ function Cart(){
                 <tbody>
                     {
                         cartList.map((el, idx) => 
-                            <tr>
+                            <tr key={idx}>
                                 <td>{el.id}</td>
                                 <td>{el.name}</td>
                                 <td>{el.count}</td>
-                                <td><button>변경하기</button></td>
+                                <td><button onClick={() => dispatch(addCount( idx ))}>+</button></td>
                             </tr>    
                         )
                     }

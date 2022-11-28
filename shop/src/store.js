@@ -6,7 +6,14 @@ import { configureStore, createSlice } from "@reduxjs/toolkit";
 let user = createSlice({
     name:"user",
     initialState:"Lee",
+    reducers:{
+        changeName(state){
+            return "john "+state;
+        }
+    }
 })
+//외부에서 reducer를 사용하기위해 export
+export let {changeName} = user.actions
 
 let stock = createSlice({
     name:"stock",
@@ -18,8 +25,16 @@ let cartList = createSlice({
     initialState:[
         {id : 0, name : "white and Black", count : 2},
         {id : 2, name : "Grey Yordan", count : 1},
-    ]
+    ],
+    reducers:{
+        addCount(state, action){
+            const idx = action.payload;
+            state[idx].count = state[idx].count + 1
+            return state
+        }
+    }
 })
+export let { addCount } = cartList.actions
 
 export default configureStore({
     reducer:{
