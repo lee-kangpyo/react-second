@@ -1,19 +1,7 @@
 // state를 저장하는 js 파일
 import { configureStore, createSlice } from "@reduxjs/toolkit";
+import user from './store/userSlice';
 
-// state 보관하기 useState의 역할
-// 리덕스에서는 state 하나를 slice라고 부름.
-let user = createSlice({
-    name:"user",
-    initialState:"Lee",
-    reducers:{
-        changeName(state){
-            return "john "+state;
-        }
-    }
-})
-//외부에서 reducer를 사용하기위해 export
-export let {changeName} = user.actions
 
 let stock = createSlice({
     name:"stock",
@@ -28,13 +16,24 @@ let cartList = createSlice({
     ],
     reducers:{
         addCount(state, action){
-            const idx = action.payload;
-            state[idx].count = state[idx].count + 1
-            return state
+            debugger;
+            const id = action.payload;
+            let elem = state.find(function(el){
+                if(el.id == id){
+                    return el
+                }
+            })
+            elem.count += 1
+        },
+        addCartItem(state, action){
+            debugger;
+            const item = action.payload;
+            state.push({id : item.id, name : item.title, count: 1 });
+            console.log(state)
         }
     }
 })
-export let { addCount } = cartList.actions
+export let { addCount, addCartItem } = cartList.actions
 
 export default configureStore({
     reducer:{
