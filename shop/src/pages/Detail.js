@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Nav from 'react-bootstrap/Nav';
  
 import {Context1} from './../App.js'
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addCartItem } from '../store.js';
 
 
@@ -24,6 +24,7 @@ let BlackBox = styled.div`
 `
 
 function Detail(props) {
+    let cartList = useSelector(state => state.cartList);
     let disPatch = useDispatch();
 
     let {id} = useParams();
@@ -31,7 +32,7 @@ function Detail(props) {
 
     const shoes = props.shoes.filter((el) => el.id == id);
     const isEmpty = shoes.length == 0;
-    console.log(shoes[0])
+
     if(isEmpty){
         return <div className='container'>해당하는 상품이 없습니다.</div>
     }else{
@@ -50,7 +51,18 @@ function Detail(props) {
                         <h4 className='pt-5'>{shoes[0].title}</h4>
                         <p>{shoes[0].content}</p>
                         <p>{shoes[0].price}원</p>
-                        <button className='btn btn-danger' onClick={() => disPatch(addCartItem(shoes[0]))}>주문하기</button>
+                        <button className='btn btn-danger' onClick={() => {
+                                let elem = cartList.find((el) => { return el.id == shoes[0].id })
+                                if (!elem){
+                                    disPatch(addCartItem({id : shoes[0].id, name : shoes[0].title, count: 1 }))
+                                    if(window.confirm("추가 되었습니다. 장바구니 페이지로 이동할까요?")){
+                                        navigator("/cart")
+                                    }
+                                }else{
+                                    alert("이미 추가되었습니다.")
+                                }
+                            }
+                        }>주문하기</button>
                     </div>
                 </div>
                 <Tabs setTapNum={setTapNum}/>

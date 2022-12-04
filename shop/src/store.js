@@ -1,7 +1,7 @@
 // state를 저장하는 js 파일
 import { configureStore, createSlice } from "@reduxjs/toolkit";
 import user from './store/userSlice';
-
+import { useNavigate } from 'react-router-dom';
 
 let stock = createSlice({
     name:"stock",
@@ -16,20 +16,12 @@ let cartList = createSlice({
     ],
     reducers:{
         addCount(state, action){
-            debugger;
             const id = action.payload;
-            let elem = state.find(function(el){
-                if(el.id == id){
-                    return el
-                }
-            })
+            let elem = state.find((el) => { return el.id == id })
             elem.count += 1
         },
         addCartItem(state, action){
-            debugger;
-            const item = action.payload;
-            state.push({id : item.id, name : item.title, count: 1 });
-            console.log(state)
+            state.push(action.payload);
         }
     }
 })

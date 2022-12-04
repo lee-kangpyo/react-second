@@ -1,11 +1,10 @@
-import {  Container, Nav, Navbar, Row  } from 'react-bootstrap';
+import {  Container, Nav, Navbar  } from 'react-bootstrap';
 import './App.css';
 
 
 import React, { createContext, useState } from 'react';
 
 import shoesInfo from './data.js'
-import Item from './component/Item'
 
 import { Routes, Route, Link, useNavigate, Outlet } from "react-router-dom";
 import Main from './pages/Main';
@@ -15,11 +14,9 @@ import Cart from './pages/Cart';
 
 import Loading from './component/Loading';
 
-
 export let Context1 = createContext();
 
 function App() {
-
   let [shoes, setShoes] = useState(shoesInfo);
   let [stock] = useState([10, 11, 12])
   let [num, setNum] = useState(2);
@@ -28,17 +25,15 @@ function App() {
   //페이지 이동을 도와주는 훅
   let navigate = useNavigate();
 
-
-
   return (
     <div className="App">
 
       <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="#home">삐에로쇼핑</Navbar.Brand>
+          <Navbar.Brand href="#home">삐에로쇼핑</Navbar.Brand> 
           <Nav className="me-auto">
             <Nav.Link href="#" onClick={()=>{navigate("/")}}>Home</Nav.Link>
-            <Nav.Link href="#" onClick={()=>{navigate("/detail")}}>detail</Nav.Link>
+            <Nav.Link href="#" onClick={()=>{navigate("/cart")}}>cart</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
