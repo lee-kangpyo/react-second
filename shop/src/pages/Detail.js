@@ -25,6 +25,7 @@ let BlackBox = styled.div`
 `
 
 function Detail(props) {
+
     let cartList = useSelector(state => state.cartList);
     let disPatch = useDispatch();
 
@@ -35,6 +36,10 @@ function Detail(props) {
 
     const shoes = props.shoes.filter((el) => el.id == id);
     const isEmpty = shoes.length == 0;
+    
+    watched(shoes)
+    
+    
 
     if(isEmpty){
         return <div className='container'>해당하는 상품이 없습니다.</div>
@@ -129,4 +134,22 @@ function TabContents({tapNum}){
     )
 }
 
+function watched(shoes){
+    let curItem = localStorage.getItem("currItem");
+    curItem = JSON.parse(curItem);
+    if(curItem){
+        let items = curItem.concat(shoes)
+
+        items = items.reduce(function(acc, current) {
+            if (acc.findIndex(({ id }) => id === current.id) === -1) {
+              acc.push(current);
+            }
+            return acc;
+          }, []);
+
+        localStorage.setItem("watched", JSON.stringify( items ) )
+    }else{
+        localStorage.setItem("watched", JSON.stringify(shoes) )
+    }
+}
 export default Detail;

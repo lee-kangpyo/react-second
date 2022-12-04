@@ -2,7 +2,7 @@ import {  Container, Nav, Navbar  } from 'react-bootstrap';
 import './App.css';
 
 
-import React, { createContext, useState } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 
 import shoesInfo from './data.js'
 
@@ -17,10 +17,23 @@ import Loading from './component/Loading';
 export let Context1 = createContext();
 
 function App() {
+  // 로컬 스토리지 사용법
+  useEffect(() => {
+    // 맨처음만 실행
+    localStorage.setItem("watched", JSON.stringify([]));
+  }, [])
+  let object = {name:"kim"};
+  localStorage.setItem("data", JSON.stringify(object))
+  let jsonStr = localStorage.getItem("data")
+  console.log(JSON.parse(jsonStr))
+  // 로컬 스토리지 사용법
+
   let [shoes, setShoes] = useState(shoesInfo);
   let [stock] = useState([10, 11, 12])
   let [num, setNum] = useState(2);
   let [isLoadingShow, setLoadingShow] = useState(false);
+
+
   
   //페이지 이동을 도와주는 훅
   let navigate = useNavigate();

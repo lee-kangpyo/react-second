@@ -12,7 +12,7 @@ let data = [
       price:110000,    
     },
     {
-      id:3,
+      id:2,
       title:"Grey Yordan",
       content:"Born in the States",
       price:130000,    
