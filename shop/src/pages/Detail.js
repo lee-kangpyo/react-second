@@ -6,6 +6,7 @@ import Nav from 'react-bootstrap/Nav';
 import {Context1} from './../App.js'
 import { useDispatch, useSelector } from 'react-redux';
 import { addCartItem } from '../store.js';
+import { useNavigate } from 'react-router-dom';
 
 
 let CustomBtn = styled.button`
@@ -26,6 +27,8 @@ let BlackBox = styled.div`
 function Detail(props) {
     let cartList = useSelector(state => state.cartList);
     let disPatch = useDispatch();
+
+    let navigate = useNavigate()
 
     let {id} = useParams();
     let [tapNum, setTapNum] = useState(0);
@@ -56,7 +59,7 @@ function Detail(props) {
                                 if (!elem){
                                     disPatch(addCartItem({id : shoes[0].id, name : shoes[0].title, count: 1 }))
                                     if(window.confirm("추가 되었습니다. 장바구니 페이지로 이동할까요?")){
-                                        navigator("/cart")
+                                        navigate("/cart")
                                     }
                                 }else{
                                     alert("이미 추가되었습니다.")
