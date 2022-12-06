@@ -135,7 +135,7 @@ function TabContents({tapNum}){
 }
 
 function watched(shoes){
-    let curItem = localStorage.getItem("currItem");
+    let curItem = localStorage.getItem("watched");
     curItem = JSON.parse(curItem);
     if(curItem){
         let items = curItem.concat(shoes)

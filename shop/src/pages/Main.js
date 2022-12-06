@@ -4,17 +4,19 @@ import { Container, Row } from 'react-bootstrap';
 import bg from '../img/bg.jpg';
 import Item from './../component/Item';
 import axious from "axios";
+import CurrentItem from './../component/CurrentItem';
 
 function Main(props){
     let [num, setNum] = props.useNumState;
     return(
         <>
+        <CurrentItem />
         <div className='main-bg' style={{backgroundImage:'url('+bg+')'}}></div>
         <Container>
             <Row>
             {
                 props.shoes.map(function(el, idx){
-                    return <Item shoes={el} ix={ idx + 1 }/>
+                    return <Item shoes={el} ix={ idx + 1 } key={idx}/>
                 })            
             }
             </Row>

@@ -14,6 +14,7 @@ import Cart from './pages/Cart';
 
 import Loading from './component/Loading';
 
+
 export let Context1 = createContext();
 
 function App() {
@@ -52,7 +53,6 @@ function App() {
       </Navbar>
 
       <Link to="/">홈으로 이동</Link>
-
       <Routes>
         <Route path='/' element={<Main shoes={shoes} onAddShoes={onAddShoes} useNumState={[num, setNum]} setLoadingShow={setLoadingShow} />}/>
         <Route path='/detail/:id' element={
