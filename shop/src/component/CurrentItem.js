@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Badge from 'react-bootstrap/Badge';
+import { useNavigate } from 'react-router-dom';
 
 function CurrentItem (){
+    let navigate = useNavigate()
     let watched = JSON.parse(localStorage.getItem("watched"));
-    console.log(watched)
     return(
         <>
             <div className="side-float">
@@ -14,7 +15,7 @@ function CurrentItem (){
                 <div className="side-float-body">
                     {watched.map((el, idx) => {
                         return (
-                            <div key={idx}>
+                            <div key={idx} onClick={()=>{navigate("/detail/"+el.id)}}>
                                 <img alt={el.title} src={process.env.PUBLIC_URL + "/shoes"+(idx+1)+".jpg"} width="100%"/>
                             </div>
                         )
