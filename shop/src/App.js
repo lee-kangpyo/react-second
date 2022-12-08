@@ -13,16 +13,20 @@ import LifeCyle from './pages/LifeCyle';
 import Cart from './pages/Cart';
 
 import Loading from './component/Loading';
-
+import { useQuery } from 'react-query';
+import axios from 'axios';
 
 export let Context1 = createContext();
 
 function App() {
   // 로컬 스토리지 사용법
-  useEffect(() => {
-    // 맨처음만 실행
+  // 맨처음만 실행
+  let watched = localStorage.getItem("watched");
+  if(!watched){
     localStorage.setItem("watched", JSON.stringify([]));
-  }, [])
+  }
+  
+    
   let object = {name:"kim"};
   localStorage.setItem("data", JSON.stringify(object))
   let jsonStr = localStorage.getItem("data")
@@ -39,6 +43,20 @@ function App() {
   //페이지 이동을 도와주는 훅
   let navigate = useNavigate();
 
+  //react-query
+  
+  let result = useQuery("작명", ()=>{
+    return axios.get("https://codingapple1.github.io/userdata.json").then((a)=>{
+      console.log("요청됨")
+      return a.data;
+    }),
+    { staleTime:1000} // 타이머 - 1초간 대기
+  })
+  /*
+  result.data         // 성공시 데이터
+  result.isLoading    // 로딩 중일떄 (bool)
+  result.error        // 실패했을때 (bool)
+  */
   return (
     <div className="App">
 
@@ -48,6 +66,11 @@ function App() {
           <Nav className="me-auto">
             <Nav.Link href="#" onClick={()=>{navigate("/")}}>Home</Nav.Link>
             <Nav.Link href="#" onClick={()=>{navigate("/cart")}}>cart</Nav.Link>
+          </Nav>
+          <Nav className="ms-auto" style={{color:"white"}}>
+            {result.isLoading && "로딩중"}
+            {result.error && "에러남"}
+            {result.data && result.data.name}
           </Nav>
         </Container>
       </Navbar>
