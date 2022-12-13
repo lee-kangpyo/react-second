@@ -2,21 +2,30 @@ import {  Container, Nav, Navbar  } from 'react-bootstrap';
 import './App.css';
 
 
-import React, { createContext, useEffect, useState } from 'react';
+import React, { lazy, Suspense, createContext, useEffect, useState } from 'react';
 
 import shoesInfo from './data.js'
 
 import { Routes, Route, Link, useNavigate, Outlet } from "react-router-dom";
 import Main from './pages/Main';
-import Detail from './pages/Detail';
+
 import LifeCyle from './pages/LifeCyle';
-import Cart from './pages/Cart';
+
+
 
 import Loading from './component/Loading';
 import { useQuery } from 'react-query';
 import axios from 'axios';
 
+//import Detail from './pages/Detail';
+//import Cart from './pages/Cart';
+
+const Detail = lazy(() => import('./pages/Detail.js'))
+const Cart = lazy(() => import('./pages/Cart.js'))
+
 export let Context1 = createContext();
+
+
 
 function App() {
   // 로컬 스토리지 사용법
@@ -76,24 +85,25 @@ function App() {
       </Navbar>
 
       <Link to="/">홈으로 이동</Link>
-      <Routes>
-        <Route path='/' element={<Main shoes={shoes} onAddShoes={onAddShoes} useNumState={[num, setNum]} setLoadingShow={setLoadingShow} />}/>
-        <Route path='/detail/:id' element={
-            <Context1.Provider value={{stock, shoes}}>
-              <Detail shoes={shoes} />
-            </Context1.Provider>
-        } />
-        <Route path="/cart" element={<Cart />}/>
-        <Route path='/about' element={<About />} >
-          <Route path='member' element={<><Outlet></Outlet><div>멤버소개</div></>}>
-            <Route path='deep' element={<div>2중</div>} />
+      <Suspense  fallback={<div>로딩중</div>}>
+        <Routes>
+          <Route path='/' element={<Main shoes={shoes} onAddShoes={onAddShoes} useNumState={[num, setNum]} setLoadingShow={setLoadingShow} />}/>
+          <Route path='/detail/:id' element={
+              <Context1.Provider value={{stock, shoes}}>
+                <Detail shoes={shoes} />
+              </Context1.Provider>
+          } />
+          <Route path="/cart" element={ <Cart /> }/>
+          <Route path='/about' element={<About />} >
+            <Route path='member' element={<><Outlet></Outlet><div>멤버소개</div></>}>
+              <Route path='deep' element={<div>2중</div>} />
+            </Route>
+            <Route path='location' element={<div>회사위치</div>} />
           </Route>
-          <Route path='location' element={<div>회사위치</div>} />
-        </Route>
-        <Route path='/lifeCyle' element={<LifeCyle />} />
-        <Route path='*' element={<div>404 error 없는 페이지입니다.</div>} />
-      </Routes>
-      
+          <Route path='/lifeCyle' element={<LifeCyle />} />
+          <Route path='*' element={<div>404 error 없는 페이지입니다.</div>} />
+        </Routes>
+      </Suspense>
       <Loading isShow = {isLoadingShow} />
     </div>
   );
