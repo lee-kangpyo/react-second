@@ -17,12 +17,13 @@ import Loading from './component/Loading';
 import { useQuery } from 'react-query';
 import axios from 'axios';
 
+
+import Transit from './component/Transit';
 //import Detail from './pages/Detail';
 //import Cart from './pages/Cart';
 
-const Detail = lazy(() => import('./pages/Detail.js'))
-const Cart = lazy(() => import('./pages/Cart.js'))
-
+const Detail = lazy(() => import('./pages/Detail.js'));
+const Cart = lazy(() => import('./pages/Cart.js'));
 export let Context1 = createContext();
 
 
@@ -101,6 +102,7 @@ function App() {
             <Route path='location' element={<div>회사위치</div>} />
           </Route>
           <Route path='/lifeCyle' element={<LifeCyle />} />
+          <Route path='/Transit' element={<Transit />} />
           <Route path='*' element={<div>404 error 없는 페이지입니다.</div>} />
         </Routes>
       </Suspense>
