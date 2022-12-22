@@ -16,16 +16,16 @@ app.use(cors())
 app.use(express.static(path.join(__dirname, 'client/build')))
 
 app.get("/", function(request, response){
-    request.sendFile(path.join(__dirname, 'client/build/index.html'))
+    response.sendFile(path.join(__dirname, 'client/build/index.html'))
 });
 
 // api 요청을 할수 있다.
-app.get("/product", function(request, response){
+app.get("/getData", function(request, response){
     // 서버에서 데이터를 받아온후 아래와같이 전달
-    request.json({"name":"제품명"})
+    response.json({"value":"express에서 가져온 데이터"})
 });
 
 
 app.get("*", function(request, response){
-    request.sendFile(path.join(__dirname, 'client/build/index.html'))
+    response.sendFile(path.join(__dirname, 'client/build/index.html'))
 })
