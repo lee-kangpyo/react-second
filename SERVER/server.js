@@ -2,6 +2,15 @@ const express = require('express')
 const path = require('path')
 const app = express()
 
+const logger = require("./logger");
+ 
+logger.info("hello world");
+logger.error("hello world");
+logger.warn("hello world");
+logger.debug("hello world");
+logger.verbose("hello world");
+logger.silly("hello world");
+
 app.listen(8080, function (){
     console.log("listening on 8080")
 })

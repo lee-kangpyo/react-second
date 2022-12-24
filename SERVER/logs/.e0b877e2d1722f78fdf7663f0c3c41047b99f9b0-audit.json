@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "C:\\react\\SERVER\\logs\\.e0b877e2d1722f78fdf7663f0c3c41047b99f9b0-audit.json",
+    "files": [
+        {
+            "date": 1671848321394,
+            "name": "C:\\react\\SERVER\\logs\\2022-12-24.exception.log",
+            "hash": "7f446ea632f5586dea43e7e354698778594be9c51f13868fed19ef7f14cefb24"
+        }
+    ],
+    "hashType": "sha256"
+}
