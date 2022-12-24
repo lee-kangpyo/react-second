@@ -26,6 +26,7 @@ const logger = winston.createLogger({
    ),
    //* 실제 로그를 어떻게 기록을 한 것인가 정의
    transports: [
+      
       //* info 레벨 로그를 저장할 파일 설정 (info: 2 보다 높은 error: 0 와 warn: 1 로그들도 자동 포함해서 저장)
       new winstonDaily({
          level: 'info', // info 레벨에선
@@ -44,6 +45,7 @@ const logger = winston.createLogger({
          maxFiles: 30,
          zippedArchive: true,
       }),
+
    ],
    //* uncaughtException 발생시 파일 설정
    exceptionHandlers: [
