@@ -1,0 +1,42 @@
+2022-12-25 20:58:37 [Winston 연습 어플리케이션] info: Server listening on port 8080
+2022-12-25 20:58:42 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-25 20:58:42 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-25 20:58:45 [Winston 연습 어플리케이션] info: 리액트 라우터에 위임
+2022-12-25 20:58:45 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-25 20:58:45 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-25 20:58:57 [Winston 연습 어플리케이션] info: 리액트 라우터에 위임
+2022-12-25 20:58:57 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-25 20:58:57 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-25 21:02:26 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-25 21:02:46 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-25 21:02:46 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-25 21:04:34 [Winston 연습 어플리케이션] info: Server listening on port 8080
+2022-12-25 21:04:53 [Winston 연습 어플리케이션] info: Server listening on port 8080
+2022-12-25 21:04:57 [Winston 연습 어플리케이션] info: GET /
+2022-12-25 21:04:57 [Winston 연습 어플리케이션] info: C:\react\SERVER\routes
+2022-12-25 21:05:19 [Winston 연습 어플리케이션] info: Server listening on port 8080
+2022-12-25 21:05:23 [Winston 연습 어플리케이션] info: GET /
+2022-12-25 21:05:23 [Winston 연습 어플리케이션] info: C:\react\SERVER\routes
+2022-12-25 21:06:15 [Winston 연습 어플리케이션] info: Server listening on port 8080
+2022-12-25 21:06:18 [Winston 연습 어플리케이션] info: GET /
+2022-12-25 21:06:18 [Winston 연습 어플리케이션] info: C:\react\SERVER\routes
+2022-12-25 21:06:57 [Winston 연습 어플리케이션] info: Server listening on port 8080
+2022-12-25 21:06:59 [Winston 연습 어플리케이션] info: GET /
+2022-12-25 21:06:59 [Winston 연습 어플리케이션] info: C:\react\SERVER\routes
+2022-12-25 21:08:51 [Winston 연습 어플리케이션] info: Server listening on port 8080
+2022-12-25 21:08:55 [Winston 연습 어플리케이션] info: GET /
+2022-12-25 21:08:55 [Winston 연습 어플리케이션] info: C:\react\SERVER\routes
+2022-12-25 21:08:55 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-25 21:08:55 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-25 21:09:20 [Winston 연습 어플리케이션] info: Server listening on port 8080
+2022-12-25 21:09:23 [Winston 연습 어플리케이션] info: GET / 모듈에서 호출
+2022-12-25 21:09:23 [Winston 연습 어플리케이션] info: C:\react\SERVER\routes
+2022-12-25 21:09:23 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-25 21:09:23 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-25 21:19:04 [Winston 연습 어플리케이션] info: Server listening on port 8080
+2022-12-25 21:19:07 [Winston 연습 어플리케이션] info: GET / 모듈에서 호출
+2022-12-25 21:19:07 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-25 21:19:07 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-25 21:19:30 [Winston 연습 어플리케이션] info: 리액트 라우터에 위임
+2022-12-25 21:19:31 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-25 21:19:31 [Winston 연습 어플리케이션] info: GET /test/getData

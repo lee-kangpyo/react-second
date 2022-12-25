@@ -1,0 +1,138 @@
+2022-12-24 13:28:48 [Winston 연습 어플리케이션] error: uncaughtException: Router.use() requires a middleware function but got a Object
+TypeError: Router.use() requires a middleware function but got a Object
+    at Function.use (C:\react\SERVER\node_modules\express\lib\router\index.js:469:13)
+    at Function.<anonymous> (C:\react\SERVER\node_modules\express\lib\application.js:227:21)
+    at Array.forEach (<anonymous>)
+    at Function.use (C:\react\SERVER\node_modules\express\lib\application.js:224:7)
+    at Object.<anonymous> (C:\react\SERVER\server.js:28:5)
+    at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+    at Module.load (internal/modules/cjs/loader.js:937:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)
+2022-12-24 13:29:48 [Winston 연습 어플리케이션] error: uncaughtException: Router.use() requires a middleware function but got a Object
+TypeError: Router.use() requires a middleware function but got a Object
+    at Function.use (C:\react\SERVER\node_modules\express\lib\router\index.js:469:13)
+    at Function.<anonymous> (C:\react\SERVER\node_modules\express\lib\application.js:227:21)
+    at Array.forEach (<anonymous>)
+    at Function.use (C:\react\SERVER\node_modules\express\lib\application.js:224:7)
+    at Object.<anonymous> (C:\react\SERVER\server.js:28:5)
+    at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+    at Module.load (internal/modules/cjs/loader.js:937:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)
+2022-12-24 13:29:56 [Winston 연습 어플리케이션] error: uncaughtException: Router.use() requires a middleware function but got a Object
+TypeError: Router.use() requires a middleware function but got a Object
+    at Function.use (C:\react\SERVER\node_modules\express\lib\router\index.js:469:13)
+    at Function.<anonymous> (C:\react\SERVER\node_modules\express\lib\application.js:227:21)
+    at Array.forEach (<anonymous>)
+    at Function.use (C:\react\SERVER\node_modules\express\lib\application.js:224:7)
+    at Object.<anonymous> (C:\react\SERVER\server.js:28:5)
+    at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+    at Module.load (internal/modules/cjs/loader.js:937:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)
+2022-12-24 13:33:00 [Winston 연습 어플리케이션] error: uncaughtException: Router.use() requires a middleware function but got a Object
+TypeError: Router.use() requires a middleware function but got a Object
+    at Function.use (C:\react\SERVER\node_modules\express\lib\router\index.js:469:13)
+    at Function.<anonymous> (C:\react\SERVER\node_modules\express\lib\application.js:227:21)
+    at Array.forEach (<anonymous>)
+    at Function.use (C:\react\SERVER\node_modules\express\lib\application.js:224:7)
+    at Object.<anonymous> (C:\react\SERVER\server.js:28:5)
+    at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+    at Module.load (internal/modules/cjs/loader.js:937:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)
+2022-12-24 13:37:37 [Winston 연습 어플리케이션] error: uncaughtException: Router.use() requires a middleware function but got a Object
+TypeError: Router.use() requires a middleware function but got a Object
+    at Function.use (C:\react\SERVER\node_modules\express\lib\router\index.js:469:13)
+    at Function.<anonymous> (C:\react\SERVER\node_modules\express\lib\application.js:227:21)
+    at Array.forEach (<anonymous>)
+    at Function.use (C:\react\SERVER\node_modules\express\lib\application.js:224:7)
+    at Object.<anonymous> (C:\react\SERVER\server.js:35:5)
+    at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+    at Module.load (internal/modules/cjs/loader.js:937:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)
+2022-12-24 13:37:52 [Winston 연습 어플리케이션] error: uncaughtException: Router.use() requires a middleware function but got a Object
+TypeError: Router.use() requires a middleware function but got a Object
+    at Function.use (C:\react\SERVER\node_modules\express\lib\router\index.js:469:13)
+    at Function.<anonymous> (C:\react\SERVER\node_modules\express\lib\application.js:227:21)
+    at Array.forEach (<anonymous>)
+    at Function.use (C:\react\SERVER\node_modules\express\lib\application.js:224:7)
+    at Object.<anonymous> (C:\react\SERVER\server.js:35:5)
+    at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+    at Module.load (internal/modules/cjs/loader.js:937:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)
+2022-12-24 13:38:26 [Winston 연습 어플리케이션] error: uncaughtException: Router.use() requires a middleware function but got a Object
+TypeError: Router.use() requires a middleware function but got a Object
+    at Function.use (C:\react\SERVER\node_modules\express\lib\router\index.js:469:13)
+    at Function.<anonymous> (C:\react\SERVER\node_modules\express\lib\application.js:227:21)
+    at Array.forEach (<anonymous>)
+    at Function.use (C:\react\SERVER\node_modules\express\lib\application.js:224:7)
+    at Object.<anonymous> (C:\react\SERVER\server.js:28:5)
+    at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+    at Module.load (internal/modules/cjs/loader.js:937:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)
+2022-12-24 13:39:55 [Winston 연습 어플리케이션] error: uncaughtException: Cannot find module './logger'
+Require stack:
+- C:\react\SERVER\routes\test.js
+- C:\react\SERVER\server.js
+Error: Cannot find module './logger'
+Require stack:
+- C:\react\SERVER\routes\test.js
+- C:\react\SERVER\server.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:889:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:745:27)
+    at Module.require (internal/modules/cjs/loader.js:961:19)
+    at require (internal/modules/cjs/helpers.js:92:18)
+    at Object.<anonymous> (C:\react\SERVER\routes\test.js:3:16)
+    at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+    at Module.load (internal/modules/cjs/loader.js:937:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+    at Module.require (internal/modules/cjs/loader.js:961:19)
+2022-12-24 13:40:04 [Winston 연습 어플리케이션] error: uncaughtException: Cannot find module './logger'
+Require stack:
+- C:\react\SERVER\routes\test.js
+- C:\react\SERVER\server.js
+Error: Cannot find module './logger'
+Require stack:
+- C:\react\SERVER\routes\test.js
+- C:\react\SERVER\server.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:889:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:745:27)
+    at Module.require (internal/modules/cjs/loader.js:961:19)
+    at require (internal/modules/cjs/helpers.js:92:18)
+    at Object.<anonymous> (C:\react\SERVER\routes\test.js:3:16)
+    at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+    at Module.load (internal/modules/cjs/loader.js:937:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+    at Module.require (internal/modules/cjs/loader.js:961:19)
+2022-12-24 13:41:02 [Winston 연습 어플리케이션] error: uncaughtException: Cannot find module './logger'
+Require stack:
+- C:\react\SERVER\routes\test.js
+- C:\react\SERVER\server.js
+Error: Cannot find module './logger'
+Require stack:
+- C:\react\SERVER\routes\test.js
+- C:\react\SERVER\server.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:889:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:745:27)
+    at Module.require (internal/modules/cjs/loader.js:961:19)
+    at require (internal/modules/cjs/helpers.js:92:18)
+    at Object.<anonymous> (C:\react\SERVER\routes\test.js:4:16)
+    at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+    at Module.load (internal/modules/cjs/loader.js:937:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+    at Module.require (internal/modules/cjs/loader.js:961:19)
