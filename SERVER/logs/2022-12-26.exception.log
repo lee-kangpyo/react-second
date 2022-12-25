@@ -1,0 +1,16 @@
+2022-12-26 00:45:57 [Winston 연습 어플리케이션] error: uncaughtException: Cannot find module 'mssql'
+Require stack:
+- C:\react\SERVER\server.js
+Error: Cannot find module 'mssql'
+Require stack:
+- C:\react\SERVER\server.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:889:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:745:27)
+    at Module.require (internal/modules/cjs/loader.js:961:19)
+    at require (internal/modules/cjs/helpers.js:92:18)
+    at Object.<anonymous> (C:\react\SERVER\server.js:16:11)
+    at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+    at Module.load (internal/modules/cjs/loader.js:937:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)
