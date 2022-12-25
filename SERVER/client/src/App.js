@@ -10,7 +10,7 @@ function App() {
     axios.get('http://localhost:8080/test/getData').then((res) => {
       setServerData(res.data.value)
     })
-  })
+  }, [])
 
   return (
     <div className="App">

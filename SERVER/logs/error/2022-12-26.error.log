@@ -1,0 +1,10 @@
+2022-12-26 00:49:48 [Winston 연습 어플리케이션] error: ConnectionError: Failed to connect to 52.78.33.182:1433 in 15000ms
+    at C:\react\SERVER\node_modules\mssql\lib\tedious\connection-pool.js:70:17
+    at Connection.onConnect (C:\react\SERVER\node_modules\tedious\lib\connection.js:1012:9)
+    at Object.onceWrapper (events.js:520:26)
+    at Connection.emit (events.js:400:28)
+    at Connection.emit (C:\react\SERVER\node_modules\tedious\lib\connection.js:1040:18)
+    at Connection.connectTimeout (C:\react\SERVER\node_modules\tedious\lib\connection.js:1254:10)
+    at Timeout._onTimeout (C:\react\SERVER\node_modules\tedious\lib\connection.js:1199:12)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)

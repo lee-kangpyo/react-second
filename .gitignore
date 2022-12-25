@@ -1,3 +1,5 @@
 SERVER/static/jdbc.js
 SERVER/node_modules
 SERVER/logs
+SERVER/logs/2022-12-26.exception.log
+SERVER/logs/2022-12-26.log

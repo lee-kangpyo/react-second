@@ -15,7 +15,7 @@ app.listen(8080, function (){
 // mssql 연동
 var sql = require('mssql');
 const config = require("./static/jdbc")
-
+/*
 sql.connect(config, function(err){
     if(err){
         logger.error(err.stack);
@@ -23,7 +23,7 @@ sql.connect(config, function(err){
     }
     logger.info('MSSQL 연결 완료')
 })
-
+*/
 // 유저가 보낸 array/object 데이터 출력해보기 위해 필요
 app.use(express.json())
 // 다른 도메인 주소끼리 ajax 요청 주고 받을때 필요
@@ -35,13 +35,12 @@ let corsOptions = {
 var cors = require("cors")
 app.use(cors(corsOptions))
 
+// 모듈로 분리
+app.use('/', indexRouter);
+app.use('/test', testRouter);
+
 // 리액트 환경 변수
 app.use(express.static(path.join(__dirname, 'client/build')))
-
-// 모듈로 분리
-app.use('/api', testRouter);
-app.use('/', indexRouter);
-
 app.get("*", function(request, response){
     logger.info("리액트 라우터에 위임")
     response.sendFile(path.join(__dirname, 'client/build/index.html'))

@@ -1,1 +1,94 @@
 2022-12-26 00:45:57 [Winston 연습 어플리케이션] info: Server listening on port 8080
+2022-12-26 00:49:33 [Winston 연습 어플리케이션] info: Server listening on port 8080
+2022-12-26 00:49:42 [Winston 연습 어플리케이션] info: 리액트 라우터에 위임
+2022-12-26 00:49:42 [Winston 연습 어플리케이션] info: 리액트 라우터에 위임
+2022-12-26 00:49:48 [Winston 연습 어플리케이션] error: ConnectionError: Failed to connect to 52.78.33.182:1433 in 15000ms
+    at C:\react\SERVER\node_modules\mssql\lib\tedious\connection-pool.js:70:17
+    at Connection.onConnect (C:\react\SERVER\node_modules\tedious\lib\connection.js:1012:9)
+    at Object.onceWrapper (events.js:520:26)
+    at Connection.emit (events.js:400:28)
+    at Connection.emit (C:\react\SERVER\node_modules\tedious\lib\connection.js:1040:18)
+    at Connection.connectTimeout (C:\react\SERVER\node_modules\tedious\lib\connection.js:1254:10)
+    at Timeout._onTimeout (C:\react\SERVER\node_modules\tedious\lib\connection.js:1199:12)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+2022-12-26 00:50:08 [Winston 연습 어플리케이션] info: 리액트 라우터에 위임
+2022-12-26 00:50:08 [Winston 연습 어플리케이션] info: 리액트 라우터에 위임
+2022-12-26 00:51:08 [Winston 연습 어플리케이션] info: Server listening on port 8080
+2022-12-26 00:51:11 [Winston 연습 어플리케이션] info: 리액트 라우터에 위임
+2022-12-26 00:51:11 [Winston 연습 어플리케이션] info: 리액트 라우터에 위임
+2022-12-26 00:51:42 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-26 00:52:03 [Winston 연습 어플리케이션] info: 리액트 라우터에 위임
+2022-12-26 00:52:03 [Winston 연습 어플리케이션] info: 리액트 라우터에 위임
+2022-12-26 00:52:42 [Winston 연습 어플리케이션] info: Server listening on port 8080
+2022-12-26 00:53:21 [Winston 연습 어플리케이션] info: Server listening on port 8080
+2022-12-26 00:53:24 [Winston 연습 어플리케이션] info: 리액트 라우터에 위임
+2022-12-26 00:53:24 [Winston 연습 어플리케이션] info: 리액트 라우터에 위임
+2022-12-26 00:54:14 [Winston 연습 어플리케이션] info: Server listening on port 8080
+2022-12-26 00:54:17 [Winston 연습 어플리케이션] info: 리액트 라우터에 위임
+2022-12-26 00:54:17 [Winston 연습 어플리케이션] info: 리액트 라우터에 위임
+2022-12-26 00:54:41 [Winston 연습 어플리케이션] info: Server listening on port 8080
+2022-12-26 00:54:43 [Winston 연습 어플리케이션] info: 리액트 라우터에 위임
+2022-12-26 00:54:43 [Winston 연습 어플리케이션] info: 리액트 라우터에 위임
+2022-12-26 00:58:53 [Winston 연습 어플리케이션] info: Server listening on port 8080
+2022-12-26 00:58:58 [Winston 연습 어플리케이션] info: 리액트 라우터에 위임
+2022-12-26 00:58:59 [Winston 연습 어플리케이션] info: 리액트 라우터에 위임
+2022-12-26 00:59:12 [Winston 연습 어플리케이션] info: Server listening on port 8080
+2022-12-26 00:59:15 [Winston 연습 어플리케이션] info: GET / 모듈에서 호출
+2022-12-26 00:59:15 [Winston 연습 어플리케이션] info: 리액트 라우터에 위임
+2022-12-26 00:59:15 [Winston 연습 어플리케이션] info: 리액트 라우터에 위임
+2022-12-26 00:59:41 [Winston 연습 어플리케이션] info: Server listening on port 8080
+2022-12-26 00:59:44 [Winston 연습 어플리케이션] info: GET / 모듈에서 호출
+2022-12-26 00:59:44 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-26 00:59:44 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-26 01:05:46 [Winston 연습 어플리케이션] info: GET / 모듈에서 호출
+2022-12-26 01:05:46 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-26 01:05:46 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-26 01:08:06 [Winston 연습 어플리케이션] info: Server listening on port 8080
+2022-12-26 01:08:24 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-26 01:08:34 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-26 01:08:36 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-26 01:08:37 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-26 01:08:38 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-26 01:08:39 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-26 01:08:58 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-26 01:09:00 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-26 01:09:02 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-26 01:09:03 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-26 01:09:03 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-26 01:10:16 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-26 01:10:21 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-26 01:10:27 [Winston 연습 어플리케이션] info: GET / 모듈에서 호출
+2022-12-26 01:10:27 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-26 01:10:30 [Winston 연습 어플리케이션] info: GET / 모듈에서 호출
+2022-12-26 01:10:30 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-26 01:10:34 [Winston 연습 어플리케이션] info: GET / 모듈에서 호출
+2022-12-26 01:10:34 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-26 01:10:40 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-26 01:10:43 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-26 01:10:44 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-26 01:10:46 [Winston 연습 어플리케이션] info: GET / 모듈에서 호출
+2022-12-26 01:10:46 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-26 01:10:48 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-26 01:10:53 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-26 01:10:55 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-26 01:10:57 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-26 01:10:58 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-26 01:10:59 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-26 01:11:00 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-26 01:11:01 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-26 01:11:22 [Winston 연습 어플리케이션] info: GET / 모듈에서 호출
+2022-12-26 01:11:22 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-26 01:11:33 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-26 01:11:56 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-26 01:11:56 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-26 01:11:56 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-26 01:12:00 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-26 01:12:01 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-26 01:12:01 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-26 01:12:03 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-26 01:12:03 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-26 01:12:03 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-26 01:12:08 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-26 01:12:10 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-26 01:12:17 [Winston 연습 어플리케이션] info: GET /test/getData
