@@ -4,6 +4,8 @@ const app = express();
 
 const logger = require("./logger");
 
+const { connPool } = require('./config/pool');
+
 
 var indexRouter = require('./routes/index');
 var testRouter = require('./routes/test');
@@ -12,9 +14,23 @@ app.listen(8080, function (){
     logger.info("Server listening on port 8080");
 })
 
+connPool;
+/*
 // mssql 연동
 var sql = require('mssql');
-const config = require("./static/jdbc")
+
+var config = {
+    user: 'dtpuser',
+    password: 'wkdsksgksi1!',
+    server: '52.78.33.182',
+    database: 'DTP',
+    stream: true,
+    options: {
+    encrypt: false,
+    trustServerCertificate: true,
+    }
+}
+*/
 sql.connect(config, function(err){
     if(err){
         logger.error(err.stack);

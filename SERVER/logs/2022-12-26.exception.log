@@ -23,3 +23,203 @@ ReferenceError: router is not defined
     at Function.Module._load (internal/modules/cjs/loader.js:778:12)
     at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)
     at internal/main/run_main_module.js:17:47
+2022-12-26 23:38:36 [Winston 연습 어플리케이션] error: uncaughtException: Cannot use import statement outside a module
+C:\react\SERVER\config\pool.js:1
+import sql from 'mssql';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at wrapSafe (internal/modules/cjs/loader.js:988:16)
+    at Module._compile (internal/modules/cjs/loader.js:1036:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+    at Module.load (internal/modules/cjs/loader.js:937:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+    at Module.require (internal/modules/cjs/loader.js:961:19)
+    at require (internal/modules/cjs/helpers.js:92:18)
+    at Object.<anonymous> (C:\react\SERVER\server.js:7:22)
+    at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+2022-12-26 23:43:47 [Winston 연습 어플리케이션] error: uncaughtException: Unexpected token 'export'
+C:\react\SERVER\config\pool.js:14
+export {
+^^^^^^
+
+SyntaxError: Unexpected token 'export'
+    at wrapSafe (internal/modules/cjs/loader.js:988:16)
+    at Module._compile (internal/modules/cjs/loader.js:1036:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+    at Module.load (internal/modules/cjs/loader.js:937:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+    at Module.require (internal/modules/cjs/loader.js:961:19)
+    at require (internal/modules/cjs/helpers.js:92:18)
+    at Object.<anonymous> (C:\react\SERVER\server.js:7:22)
+    at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+2022-12-26 23:47:45 [Winston 연습 어플리케이션] error: uncaughtException: Unexpected token '{'
+C:\react\SERVER\config\pool.js:14
+module.export {
+              ^
+
+SyntaxError: Unexpected token '{'
+    at wrapSafe (internal/modules/cjs/loader.js:988:16)
+    at Module._compile (internal/modules/cjs/loader.js:1036:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+    at Module.load (internal/modules/cjs/loader.js:937:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+    at Module.require (internal/modules/cjs/loader.js:961:19)
+    at require (internal/modules/cjs/helpers.js:92:18)
+    at Object.<anonymous> (C:\react\SERVER\server.js:7:22)
+    at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+2022-12-26 23:48:18 [Winston 연습 어플리케이션] error: uncaughtException: Unexpected token 'export'
+C:\react\SERVER\config\config.js:4
+export const config = {
+^^^^^^
+
+SyntaxError: Unexpected token 'export'
+    at wrapSafe (internal/modules/cjs/loader.js:988:16)
+    at Module._compile (internal/modules/cjs/loader.js:1036:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+    at Module.load (internal/modules/cjs/loader.js:937:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+    at Module.require (internal/modules/cjs/loader.js:961:19)
+    at require (internal/modules/cjs/helpers.js:92:18)
+    at Object.<anonymous> (C:\react\SERVER\config\pool.js:2:18)
+    at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+2022-12-26 23:49:15 [Winston 연습 어플리케이션] error: uncaughtException: Cannot read property 'dbconfig' of undefined
+TypeError: Cannot read property 'dbconfig' of undefined
+    at Object.<anonymous> (C:\react\SERVER\config\pool.js:4:48)
+    at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+    at Module.load (internal/modules/cjs/loader.js:937:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+    at Module.require (internal/modules/cjs/loader.js:961:19)
+    at require (internal/modules/cjs/helpers.js:92:18)
+    at Object.<anonymous> (C:\react\SERVER\server.js:7:22)
+    at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+2022-12-26 23:51:01 [Winston 연습 어플리케이션] error: uncaughtException: Cannot read property 'dbconfig' of undefined
+TypeError: Cannot read property 'dbconfig' of undefined
+    at Object.<anonymous> (C:\react\SERVER\config\pool.js:4:48)
+    at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+    at Module.load (internal/modules/cjs/loader.js:937:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+    at Module.require (internal/modules/cjs/loader.js:961:19)
+    at require (internal/modules/cjs/helpers.js:92:18)
+    at Object.<anonymous> (C:\react\SERVER\server.js:7:22)
+    at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+2022-12-26 23:51:42 [Winston 연습 어플리케이션] error: uncaughtException: Cannot read property 'dbconfig' of undefined
+TypeError: Cannot read property 'dbconfig' of undefined
+    at Object.<anonymous> (C:\react\SERVER\config\pool.js:6:48)
+    at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+    at Module.load (internal/modules/cjs/loader.js:937:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+    at Module.require (internal/modules/cjs/loader.js:961:19)
+    at require (internal/modules/cjs/helpers.js:92:18)
+    at Object.<anonymous> (C:\react\SERVER\server.js:7:22)
+    at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+2022-12-26 23:52:36 [Winston 연습 어플리케이션] error: uncaughtException: Cannot read property 'dbconfig' of undefined
+TypeError: Cannot read property 'dbconfig' of undefined
+    at Object.<anonymous> (C:\react\SERVER\config\pool.js:6:48)
+    at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+    at Module.load (internal/modules/cjs/loader.js:937:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+    at Module.require (internal/modules/cjs/loader.js:961:19)
+    at require (internal/modules/cjs/helpers.js:92:18)
+    at Object.<anonymous> (C:\react\SERVER\server.js:7:22)
+    at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+2022-12-26 23:53:06 [Winston 연습 어플리케이션] error: uncaughtException: Cannot read property 'dbconfig' of undefined
+TypeError: Cannot read property 'dbconfig' of undefined
+    at Object.<anonymous> (C:\react\SERVER\config\pool.js:6:48)
+    at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+    at Module.load (internal/modules/cjs/loader.js:937:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+    at Module.require (internal/modules/cjs/loader.js:961:19)
+    at require (internal/modules/cjs/helpers.js:92:18)
+    at Object.<anonymous> (C:\react\SERVER\server.js:7:22)
+    at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+2022-12-26 23:54:29 [Winston 연습 어플리케이션] error: uncaughtException: Unexpected token 'export'
+C:\react\SERVER\config\config.js:29
+export default config 
+^^^^^^
+
+SyntaxError: Unexpected token 'export'
+    at wrapSafe (internal/modules/cjs/loader.js:988:16)
+    at Module._compile (internal/modules/cjs/loader.js:1036:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+    at Module.load (internal/modules/cjs/loader.js:937:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+    at Module.require (internal/modules/cjs/loader.js:961:19)
+    at require (internal/modules/cjs/helpers.js:92:18)
+    at Object.<anonymous> (C:\react\SERVER\config\pool.js:2:20)
+    at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+2022-12-26 23:56:15 [Winston 연습 어플리케이션] error: uncaughtException: Cannot read property 'dbconfig' of undefined
+TypeError: Cannot read property 'dbconfig' of undefined
+    at Object.<anonymous> (C:\react\SERVER\config\pool.js:6:48)
+    at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+    at Module.load (internal/modules/cjs/loader.js:937:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+    at Module.require (internal/modules/cjs/loader.js:961:19)
+    at require (internal/modules/cjs/helpers.js:92:18)
+    at Object.<anonymous> (C:\react\SERVER\server.js:7:22)
+    at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+2022-12-26 23:56:31 [Winston 연습 어플리케이션] error: uncaughtException: Cannot read property 'dbconfig' of undefined
+TypeError: Cannot read property 'dbconfig' of undefined
+    at Object.<anonymous> (C:\react\SERVER\config\pool.js:6:48)
+    at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+    at Module.load (internal/modules/cjs/loader.js:937:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+    at Module.require (internal/modules/cjs/loader.js:961:19)
+    at require (internal/modules/cjs/helpers.js:92:18)
+    at Object.<anonymous> (C:\react\SERVER\server.js:7:22)
+    at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+2022-12-26 23:56:43 [Winston 연습 어플리케이션] error: uncaughtException: Cannot read property 'dbconfig' of undefined
+TypeError: Cannot read property 'dbconfig' of undefined
+    at Object.<anonymous> (C:\react\SERVER\config\pool.js:6:48)
+    at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+    at Module.load (internal/modules/cjs/loader.js:937:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+    at Module.require (internal/modules/cjs/loader.js:961:19)
+    at require (internal/modules/cjs/helpers.js:92:18)
+    at Object.<anonymous> (C:\react\SERVER\server.js:7:22)
+    at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+2022-12-26 23:56:50 [Winston 연습 어플리케이션] error: uncaughtException: Cannot read property 'dbconfig' of undefined
+TypeError: Cannot read property 'dbconfig' of undefined
+    at Object.<anonymous> (C:\react\SERVER\config\pool.js:6:48)
+    at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+    at Module.load (internal/modules/cjs/loader.js:937:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+    at Module.require (internal/modules/cjs/loader.js:961:19)
+    at require (internal/modules/cjs/helpers.js:92:18)
+    at Object.<anonymous> (C:\react\SERVER\server.js:7:22)
+    at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+2022-12-26 23:58:31 [Winston 연습 어플리케이션] error: uncaughtException: Cannot read property 'dbconfig' of undefined
+TypeError: Cannot read property 'dbconfig' of undefined
+    at Object.<anonymous> (C:\react\SERVER\config\pool.js:6:48)
+    at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+    at Module.load (internal/modules/cjs/loader.js:937:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+    at Module.require (internal/modules/cjs/loader.js:961:19)
+    at require (internal/modules/cjs/helpers.js:92:18)
+    at Object.<anonymous> (C:\react\SERVER\server.js:7:22)
+    at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
