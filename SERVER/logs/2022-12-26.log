@@ -92,3 +92,18 @@
 2022-12-26 01:12:08 [Winston 연습 어플리케이션] info: GET /test/getData
 2022-12-26 01:12:10 [Winston 연습 어플리케이션] info: GET /test/getData
 2022-12-26 01:12:17 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-26 22:36:44 [Winston 연습 어플리케이션] info: Server listening on port 8080
+2022-12-26 22:37:41 [Winston 연습 어플리케이션] info: GET /test/getData
+2022-12-26 22:42:11 [Winston 연습 어플리케이션] info: Server listening on port 8080
+2022-12-26 22:42:11 [Winston 연습 어플리케이션] error: ConnectionError: Failed to connect to 52.78.33.182:1433 - 16276:error:1425F102:SSL routines:ssl_choose_client_version:unsupported protocol:c:\ws\deps\openssl\openssl\ssl\statem\statem_lib.c:1958:
+
+    at C:\react\SERVER\node_modules\mssql\lib\tedious\connection-pool.js:70:17
+    at Connection.onConnect (C:\react\SERVER\node_modules\tedious\lib\connection.js:1012:9)
+    at Object.onceWrapper (events.js:520:26)
+    at Connection.emit (events.js:400:28)
+    at Connection.emit (C:\react\SERVER\node_modules\tedious\lib\connection.js:1040:18)
+    at Connection.socketError (C:\react\SERVER\node_modules\tedious\lib\connection.js:1395:12)
+    at C:\react\SERVER\node_modules\tedious\lib\connection.js:2402:25
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+2022-12-26 23:20:35 [Winston 연습 어플리케이션] info: Server listening on port 8080
+2022-12-26 23:20:36 [Winston 연습 어플리케이션] info: MSSQL 연결 완료
