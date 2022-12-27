@@ -1,8 +1,6 @@
 const sql = require('mssql');
 const { config } = require('./config');
 
-console.log(config)
-
 const connPool = new sql.ConnectionPool(config.dbconfig)
   .connect()
   .then((pool) => {
