@@ -14,7 +14,7 @@ router.get("/getData", function (request, response){
     response.json({"value":"express에서 가져온 데이터"})
 });
 
-router.post("/getTestYak", async (req, res) => {
+router.get("/getTestYak", async (req, res) => {
     logger.info("GET /test/getTestYak")
     try{
         const query = await pool;               // Query 실행을 위한 Pool 지정
