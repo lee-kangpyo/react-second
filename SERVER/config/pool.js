@@ -1,7 +1,7 @@
 const sql = require('mssql');
 const { config } = require('./config');
 
-const connPool = new sql.ConnectionPool(config.dbconfig)
+const pool = new sql.ConnectionPool(config.dbconfig)
   .connect()
   .then((pool) => {
     console.log('DB연결 성공');
@@ -10,8 +10,9 @@ const connPool = new sql.ConnectionPool(config.dbconfig)
   .catch((err) => {
     console.log('err ', err);
   });
+ 
 
-module.export = {
+module.exports = {
   sql,
-  connPool
+  pool
 }
