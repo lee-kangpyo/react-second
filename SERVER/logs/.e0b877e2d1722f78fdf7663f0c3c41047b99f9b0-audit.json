@@ -29,6 +29,16 @@
             "date": 1672306647632,
             "name": "C:\\react\\SERVER\\logs\\2022-12-29.exception.log",
             "hash": "954ae67af559cbcecc29f0f02d334955a15a5b25263acd5e7498faa082b3191b"
+        },
+        {
+            "date": 1672403145346,
+            "name": "C:\\react\\SERVER\\logs\\2022-12-30.exception.log",
+            "hash": "ad62f19a777ae866e9896911d80fdb0349de888fbf6cb2e6fe2614a417adc182"
+        },
+        {
+            "date": 1672458684276,
+            "name": "C:\\react\\SERVER\\logs\\2022-12-31.exception.log",
+            "hash": "019dbd468788701b3e05a3ee6380d931e9d38befdf41d122319fe8c374159f8e"
         }
     ],
     "hashType": "sha256"

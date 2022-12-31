@@ -2,3 +2,4 @@ SERVER/static/jdbc.js
 SERVER/node_modules
 SERVER/logs
 SERVER/.env
+SERVER/client/.env
