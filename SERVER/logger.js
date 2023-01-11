@@ -52,7 +52,7 @@ const logger = winston.createLogger({
       new winstonDaily({
          level: 'error',
          datePattern: 'YYYY-MM-DD',
-         dirname: logDir,
+         dirname: logDir + '/error',
          filename: `%DATE%.exception.log`,
          maxFiles: 30,
          zippedArchive: true,
