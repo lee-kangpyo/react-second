@@ -44,6 +44,16 @@
             "date": 1673435929467,
             "name": "C:\\react\\SERVER\\logs\\error\\2023-01-11.error.log",
             "hash": "044afe411c16b0e34aa11e46a7a8e1b367d334ed6f037c6e7623767c85acb10f"
+        },
+        {
+            "date": 1673520407244,
+            "name": "C:\\react\\SERVER\\logs\\error\\2023-01-12.error.log",
+            "hash": "1fc59151a8f396df57abc7bbe79e7191eb57367e42804516291d792af51f5ff5"
+        },
+        {
+            "date": 1674125813942,
+            "name": "C:\\react\\SERVER\\logs\\error\\2023-01-19.error.log",
+            "hash": "e9ba4f6c40f1d1edf3c58230bf4ac895116c170ae5535aeeee11682ea8af8f05"
         }
     ],
     "hashType": "sha256"

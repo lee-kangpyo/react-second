@@ -5,6 +5,10 @@ const logger = require("../logger");
 
 const { sql, pool } = require('../config/pool');
 
+const mapper = require('mybatis-mapper');	// MyBatis Mapper 로드
+
+mapper.createMapper(["./mapper/user.xml"])   // MyBatis SQL 로드
+
 
 // api 요청을 할수 있다.
 
@@ -16,6 +20,21 @@ router.get("/getData", function (request, response){
 
 router.get("/getTestYak", async (req, res) => {
     logger.info("GET /test/getTestYak")
+    
+    try{
+        const query = await pool;               // Query 실행을 위한 Pool 지정
+        const params = { 'cstCl':'PH' }
+        const format = { language:'sql' };
+        const sqlText = mapper.getStatement('user', 'getList', params, format);
+        logger.info(sqlText)
+        const result = await query.request().query(sqlText);
+        //logger.info(sqlText);
+        res.send(result);                       // Response에 결과값을 포함하여 전달
+    }catch(err){
+        res.status(500);                        // 에러 발생시 Response 상태를 서버에러인 500에러로 세팅
+        res.send(err.message);                  // 에러 발생시 Response에 서버에러 내용 포함 전달
+    }
+    /*
     try{
         const query = await pool;                                   // Query 실행을 위한 Pool 지정
         const result = await query.request()                        // Query 요청
@@ -27,7 +46,7 @@ router.get("/getTestYak", async (req, res) => {
         res.status(500);                                            // 에러 발생시 Response 상태를 서버에러인 500에러로 세팅
         res.send(err.message);                                      // 에러 발생시 Response에 서버에러 내용 포함 전달
     }
-    
+    */
 });
 
 
