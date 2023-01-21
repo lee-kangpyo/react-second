@@ -20,7 +20,7 @@ function App() {
       setServerData(res.data.value)
     })
     // 약올려 db에서 값 받아보기
-    axios.get('http://localhost:8080/test/getTestYak').then((res) => {
+    axios.get('http://localhost:8080/test/getTestYak?cstCl=PH').then((res) => {
       setYakollyeoData(JSON.stringify(res.data.recordset))
     })
   }, [])

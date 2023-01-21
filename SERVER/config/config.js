@@ -1,6 +1,9 @@
+// 환경변수 불러오기 ----------------------------------------
 const dotenv = require('dotenv');
 dotenv.config();
+// ---------------------------------------------------------
 
+// config 객체 생성 후 export -------------------------------
 const config = {
   port: process.env.DB_PORT,
   dbconfig: {
@@ -27,3 +30,4 @@ const config = {
 };
 
 module.exports = { config };
+// ---------------------------------------------------------
