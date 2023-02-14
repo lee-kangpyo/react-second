@@ -3,3 +3,8 @@ SERVER/node_modules
 SERVER/logs
 SERVER/.env
 SERVER/client/.env
+YAKOLLYEO/static/jdbc.js
+YAKOLLYEO/node_modules
+YAKOLLYEO/logs
+YAKOLLYEO/.env
+YAKOLLYEO/client/.env
