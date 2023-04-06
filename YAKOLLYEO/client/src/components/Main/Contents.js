@@ -64,34 +64,6 @@ function Contents({frame}){
         }
     }
     var obj = objs[frame];
-/*
-    
-                    <div className="box_layout">
-                    <p>01</p>
-                    <p className="title">약국 <span className="highlight"><span name="PH">500</span>곳</span>에서 여러분의 재고를 원해요</p>
-                    <p className="content">약국에 팔면 도매 판매보다 최소 2% 마진 상승</p>
-                    <i className="bg-wh_1"><span className="blind">손</span></i>
-                    </div>
-                    <div className="box_layout">
-                    <p>02</p>
-                    <p className="title"><span className="highlight">유효임박재고</span>신속히 팔아드려요</p>
-                    <p className="content">평균 일주일 소요</p>
-                    <i className="bg-wh_2"><span className="blind">돈다발</span></i>
-                    </div>
-                    <div className="box_layout">
-                    <p>03</p>
-                    <p className="title">약국 판매해도<span className="highlight">채권, 직납</span>없어요</p>
-                    <p className="content">판매 5일후 바로 수금</p>
-                    <i className="bg-wh_3"><span className="blind">돈뭉치</span></i>
-                    </div>
-                    <div className="box_layout">
-                    <p>04</p>
-                    <p className="title">도매 <span className="highlight"><span name="WH">700</span>곳</span>에서</p>
-                    <p className="content">이 모든 혜택을 누리고<br/>있습니다.</p>
-                    <i className="bg-wh_4"><span className="blind">의약품도매</span></i>
-                    </div>
-*/ 
-
     return(
         <div className={frame}>
             <div className="main_contnet">
