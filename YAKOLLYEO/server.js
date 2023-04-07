@@ -6,6 +6,7 @@ const logger = require("./logger");
 
 var indexRouter = require('./routes/index');
 var testRouter = require('./routes/test');
+var apiRouter = require('./routes/api');
 
 app.listen(8080, () => { logger.info("Server listening on port 8080"); })
 
@@ -23,6 +24,7 @@ app.use(cors(corsOptions))
 // 모듈로 분리
 app.use('/', indexRouter);
 app.use('/test', testRouter);
+app.use('/api', apiRouter);
 
 // 리액트 환경 변수
 app.use(express.static(path.join(__dirname, 'client/build')))

@@ -21,4 +21,3 @@ exports.getTestYak = async (req, res, next) => {
         res.send(err.message);                                      // 에러 발생시 Response에 서버에러 내용 포함 전달
     }
 }
-

@@ -1,6 +1,42 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 function Footer(){
+    const openCompanyInfo = () => {
+        window.open('https://lookinsight.imweb.me/26', '_blank');
+    };
+    const businessInfo = () => {
+        window.open('https://www.ftc.go.kr/bizCommPop.do?wrkr_no=8508701176','mywin','top=0,width=780,height=860');
+    };
+
+    
+
+    const openInfo = (id) =>{
+        axios.post("/api/v1/clkLandingBtn", { id: id } ).then(res => {
+            console.log(res.data);
+        }) .catch(error => {
+            console.error(error);
+        });
+
+        /*
+        $.post("/api/v1/getS090Info.do", "id="+id, function(data){
+			console.log(data.result)
+			var msg = "", title = "";
+			if(id == "termsOfService"){
+				msg = data.msg;
+				title = "이용약관";
+	 		}else if(id == "privacyStatement"){
+	 			msg = data.msg;
+	 			title = "개인정보취급방침";
+	 		}
+			$("#infoLayerTitle").text(title)
+			$(".infoLayer > .body").html(msg);
+			if(msg) $(".infoLayer").addClass("show");	
+		});*/
+    }
+	
+    
+
     return(
         <>
             <div className="footer_frame">
@@ -14,10 +50,10 @@ function Footer(){
                     </div>
                     <div className="footer_s_group">
                         <div>
-                            <button id="companyInfo" className="footer_font footer_btn">회사소개</button>
-                            <button id="termsOfService" className="footer_font footer_btn">이용약관</button>
-                            <button id="privacyStatement" className="footer_font footer_btn">개인정보처리방침</button>
-                            <button className="footer_font footer_btn" onclick="window.open('https://www.ftc.go.kr/bizCommPop.do?wrkr_no=8508701176','mywin','top=0,width=780,height=860');">사업자정보확인</button>
+                            <button onClick={openCompanyInfo} className="footer_font footer_btn">회사소개</button>
+                            <button onClick={()=>openInfo("termsOfService")} className="footer_font footer_btn">이용약관</button>
+                            <button onClick={()=>openInfo("privacyStatement")} className="footer_font footer_btn">개인정보처리방침</button>
+                            <button onClick={businessInfo} className="footer_font footer_btn" >사업자정보확인</button>
                         </div>
                         <div>
                             <p className="footer_font footer_font_sub">(주)룩인사이트는 통신판매 중개자로, 통신판매의 당사자가 아닙니다</p>
