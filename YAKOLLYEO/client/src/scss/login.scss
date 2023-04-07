@@ -39,6 +39,75 @@
     background-color: #f8f8fb;
     text-align: left;
 }
+.footer_frame {
+    position: relative;
+    height: 116px;
+    background: #f3f4fa;
+    z-index: 10;
+    text-align: left;
+
+    > .main_contnet {
+        position: relative;
+        width: 1130px;
+        margin: 0 auto;
+        padding: 24px 30px;
+        > .footer_f_group {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 16px;
+            > .bg-footerLogo {
+                width: 57px;
+                height: 24px;
+                background: url(/img/login/landing.png) -300px -86px;
+                background-size: 376px 288px;
+                display: inline-block;
+                margin-right: 16px;
+            }
+        }
+        .footer_font_bold {
+            font-weight: 700;
+        }
+    }
+
+    .footer_s_group {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer_font {
+        font-family: pretendard;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: -.02em;
+        color: #9395a6;
+        margin: 0;
+    }
+    .footer_btn {
+        height: 24px;
+        border: 1px solid #e4e6f0;
+        border-radius: 4px;
+        font-weight: 500;
+        font-size: 10px;
+        color: #9395a6;
+        margin-right: 5px;
+    }
+
+    .footer_font_sub {
+        font-size: 10px;
+        line-height: 12px;
+        color: #9395a6;
+    }
+
+}
+
 .main_contnet{
     position: relative;
     width: 1130px;
