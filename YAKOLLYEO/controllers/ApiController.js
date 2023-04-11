@@ -7,9 +7,8 @@ const TestService = require('../services/TestService')
 exports.clkLandingBtn =  (req, res, next) => {
     logger.info("ApiController.clkLandingBtn - post /api/v1/clkLandingBtn")
     try {
-        
         let { id } = req.body
-
+        logger.info(id);
         //const params = { 'cstCl':cstCl }
         //const result = await TestService.getTestYak(params);
         //res.json({"value":"다녀옴"})

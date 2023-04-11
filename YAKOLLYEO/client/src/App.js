@@ -30,18 +30,13 @@ function App() {
 
   return (
     <div className="App">
-      <Login/>
-      <Link to="/test">테스트로 이동</Link>
-      <div>리액트로 만든 html</div>
-
       <Suspense>
         <Routes>
-          <Route path='/' element={<><div>{serverData}</div><div>{yakollyeoData}</div></>}/>
-          <Route path='/test' element={<><Link to="/">홈으로 이동</Link></>}/>
+          <Route path='/' element={<Login/>}/>
+          <Route path='/test' element={<><div>{serverData}</div><div>{yakollyeoData}</div></>}/>
           <Route path='*' element={<NotFoundPage />} />
         </Routes>
       </Suspense>
-
     </div>
   );
 }

@@ -35,7 +35,7 @@
 }
 .bottom_frame {
     position: relative;
-    height: 540px;
+    height: 580px;
     background-color: #f8f8fb;
     text-align: left;
 }
@@ -254,4 +254,193 @@
     background: url(/img/login/landing.png) -169px -168px;
     background-size: 376px 288px;
 }
+.bg-call_icon {
+    width: 16px;
+    height: 16px;
+    background: url(/img/login/landing.png) -330px -120px;
+    background-size: 376px 288px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.bg-fax_icon {
+    width: 16px;
+    height: 16px;
+    background: url(/img/login/landing.png) -300px -150px;
+    background-size: 376px 288px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.bg-mail_icon {
+    width: 16px;
+    height: 16px;
+    background: url(/img/login/landing.png) -352px -150px;
+    background-size: 376px 288px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.bg-first_visit {
+    width: 109px;
+    height: 33px;
+    background: url(/img/login/landing.png) -5px -250px;
+    background-size: 376px 288px;
+    display: inline-block;
+}
+.bg-news_icon {
+    width: 20px;
+    height: 20px;
+    background: url(/img/login/landing.png) -300px -120px;
+    background-size: 376px 288px;
+    display: inline-block;
+    vertical-align: text-bottom;
+}
+.bg-left {
+    width: 18px;
+    height: 18px;
+    background: url(/img/login/landing.png) -326px -150px;
+    background-size: 376px 288px;
+    display: inline-block;
+}
+.bg-right {
+    width: 18px;
+    height: 18px;
+    background: url(/img/login/landing.png) -300px -176px;
+    background-size: 376px 288px;
+    display: inline-block;
+}
+.bg-dot {
+    width: 4px;
+    height: 4px;
+    background: url(/img/login/landing.png) -367px -86px;
+    background-size: 376px 288px;
+    display: inline-block;
+}
+.bg-dot.active {
+    background-position: -367px -100px;
+}
 
+.login_container{
+    padding: 50px 24px;
+    position: absolute;
+    left: 810px;
+    top: -1px;
+    width: auto;
+    height: 220%;
+    background-color: #fff;
+    z-index: 5;
+
+    font-family: pretendard;
+    font-style: normal;
+    font-weight: 700;
+    
+    line-height: 40px;
+    letter-spacing: -.02em;
+    color: #353644;
+}
+
+.contact_us {
+    padding: 16px;
+    gap: 16px;
+    width: 240px;
+    background: #fbfbfd;
+    border-radius: 16px;
+
+    >p {
+        font-family: pretendard;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: -.02em;
+        color: #626474;
+        margin-bottom: 0;
+        margin-top:0;
+    }
+    >p.core {
+        font-weight: 600;
+        font-size: 14px;
+        color: #353644;
+    }
+    >div {
+        height: 16px;
+    }
+    >p.sub {
+        font-weight: 500;
+        font-size: 12px;
+        color: #9395a6;
+    }
+
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.login_container .input_label {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: #b7b9c9;
+    margin: 0 0 5px;
+}
+#loginForm  input{
+    border: none;
+    border-bottom: 1px solid white;
+    border-radius: 0px;
+    box-shadow: none;
+    font-size: 1.3rem;
+    font-family: snow;
+    background-color: rgba(0,0,0,0);
+    color: white;
+}
+
+.login_container #loginForm input#autoCompleteId {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#loginForm .sub_font, #loginForm .sub_font>a {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+#loginForm .sub_font>a {
+    color: #9395a6;
+    text-decoration: none;
+}
+
+#loginForm .sub_font>a:hover {
+    font-weight: bold;
+}
+#loginForm>button {
+    font-family: pretendard;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -.02em;
+    color: #fff;
+}
+
+.newsletter {
+    padding: 16px;
+    width: 730px;
+    height: 140px;
+    background: #f3f4fa;
+    border: 1px solid #e4e6f0;
+    border-radius: 16px;
+    > div{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 8px;
+    }
+}
+#slide>i {
+    vertical-align: middle;
+    cursor: pointer;
+    margin: 2px;
+}

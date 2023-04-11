@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import "../../scss/login.scss";
+
 import logo from '../../img/login/logo.png'
 
 

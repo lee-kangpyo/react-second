@@ -2,6 +2,8 @@ import React from 'react';
 import Header from '../components/Main/Header'
 import Contents from '../components/Main/Contents'
 import Footer from '../components/Main/Footer';
+import Login from '../components/Main/LoginBar';
+import "../scss/login.scss";
 
 const NotFoundPage = () => {
   
