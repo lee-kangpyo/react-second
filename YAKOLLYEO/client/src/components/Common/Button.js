@@ -1,8 +1,9 @@
 import React from "react";
 
-function Button({ text, onClick, disabled, style }) {
+function Button({ text, onClick, disabled, style, type }) {
   return (
     <button
+      type={type}
       style={{
         backgroundColor: "#00c68d",
         border: "none",

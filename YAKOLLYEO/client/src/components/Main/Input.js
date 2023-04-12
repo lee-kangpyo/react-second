@@ -15,7 +15,7 @@ const defaultStyle = {
     boxShadow: "none",
     fontSize: "16px",
     fontFamily: "snow",
-    marginBottom: "9px"
+    marginBottom: "-10px"
 };
 
 function Input({ label, name, type, value, onChange, error, style }) {
@@ -31,9 +31,9 @@ function Input({ label, name, type, value, onChange, error, style }) {
         value={value}
         onChange={onChange}
       />
-      {error && <span>{error}</span>}
+      {error && <span className="error">{error}</span>}
     </div>
   );
 }
 
-export default Input;
+export default Input

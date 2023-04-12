@@ -6,7 +6,6 @@ import logo from '../../img/login/logo.png'
 
 function Header(){
     return(
-        
         <div className='header'>
             <div className="header_contents">
                 <img

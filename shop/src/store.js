@@ -1,7 +1,7 @@
 // state를 저장하는 js 파일
 import { configureStore, createSlice } from "@reduxjs/toolkit";
 import user from './store/userSlice';
-import { useNavigate } from 'react-router-dom';
+
 
 let stock = createSlice({
     name:"stock",
