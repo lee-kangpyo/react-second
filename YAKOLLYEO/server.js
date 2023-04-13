@@ -8,6 +8,8 @@ var indexRouter = require('./routes/index');
 var testRouter = require('./routes/test');
 var apiRouter = require('./routes/api');
 
+var redisClient = require('./util/redis');
+
 app.listen(8080, () => { logger.info("Server listening on port 8080"); })
 
 // 유저가 보낸 array/object 데이터 출력해보기 위해 필요

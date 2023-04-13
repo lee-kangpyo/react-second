@@ -1,0 +1,6 @@
+{
+    "redis-console.host": "13.125.213.183",
+    "redis-console.port": 6379,
+    "redis-console.password": "",
+    "redis-console.hostIpFamily": 4
+}
