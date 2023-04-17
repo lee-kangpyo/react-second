@@ -8,6 +8,7 @@ import "./util/fcm";
 import NotFoundPage from './pages/NotFoundPage';
 
 import Login from './pages/LoginPage';
+import Home from './pages/HomePage';
 
 
 
@@ -33,6 +34,8 @@ function App() {
       <Suspense>
         <Routes>
           <Route path='/' element={<Login/>}/>
+          <Route path='/home' element={<Home/>}/>
+          
           <Route path='/test' element={<><div>{serverData}</div><div>{yakollyeoData}</div></>}/>
           <Route path='*' element={<NotFoundPage />} />
         </Routes>

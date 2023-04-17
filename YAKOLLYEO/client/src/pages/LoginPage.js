@@ -5,7 +5,7 @@ import Footer from '../components/Main/Footer';
 import Login from '../components/Main/LoginBar';
 import "../scss/login.scss";
 
-const NotFoundPage = () => {
+const LoginPage = () => {
   
   return (
     <>
@@ -17,4 +17,4 @@ const NotFoundPage = () => {
   );
 };
 
-export default NotFoundPage;
+export default LoginPage;

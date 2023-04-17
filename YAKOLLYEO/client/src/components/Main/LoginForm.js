@@ -1,11 +1,15 @@
-import React from 'react';
+import React , {useState}from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import Input from './Input';
 import Button from '../Common/Button';
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
 
 function LoginForm(){
+    const [activeLoginBtn, setActiveLoginBtn] = useState(false);
+    const navigate = useNavigate();
+
     const initialValues = {
         userId: '',
         password: '',
@@ -18,16 +22,24 @@ function LoginForm(){
     });
 
     const onSubmit = values => {
-        console.log(values);
+        setActiveLoginBtn(true);
         // 서버에 로그인 요청을 보낸다.
         axios.post('/login', values)
         .then(response => {
-            console.log(response.data);  // 서버에서 보낸 응답 데이터를 콘솔에 출력합니다.
+            //console.log(response.data);  // 서버에서 보낸 응답 데이터를 콘솔에 출력합니다.
             // 상태를 업데이트하거나, 리다이렉트 등의 작업을 수행합니다.
+            if(response.data.totalCount == 1){
+                console.log("로그인 완료")
+                navigate("/home", {replace:true})
+            }else{
+                console.log("로그인 실패")
+            }
         })
         .catch(error => {
             console.log(error);  // 에러가 발생했을 때 콘솔에 출력합니다.
             // 에러 처리를 수행합니다.
+        }).finally(()=>{
+            setActiveLoginBtn(false);
         });
     };
 
@@ -73,8 +85,8 @@ function LoginForm(){
                     <a className="forgot-password-txt" href="/user/login/DTPS096.do" id="find_pw">비밀번호 찾기</a>
                 </span>
             </div>
-            <Button type="submit" text="로그인" style={{display: "block", width: "100%", marginBottom: "5px"}}/>
-            <Button type="button" text="회원가입" style={{display: "block", width: "100%", background:"#63a1ff"}}/>
+            <Button type="submit" text="로그인" style={{display: "block", width: "100%", marginBottom: "5px"}} disabled={activeLoginBtn}/>
+            <Button type="button" text="회원가입" style={{display: "block", width: "100%", background:"#63a1ff", marginBottom: "5px"}}/>
         </form>
     );
 }
