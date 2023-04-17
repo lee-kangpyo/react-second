@@ -3,6 +3,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import Input from './Input';
 import Button from '../Common/Button';
+import axios from 'axios'
 
 function LoginForm(){
     const initialValues = {
@@ -19,6 +20,15 @@ function LoginForm(){
     const onSubmit = values => {
         console.log(values);
         // 서버에 로그인 요청을 보낸다.
+        axios.post('/login', values)
+        .then(response => {
+            console.log(response.data);  // 서버에서 보낸 응답 데이터를 콘솔에 출력합니다.
+            // 상태를 업데이트하거나, 리다이렉트 등의 작업을 수행합니다.
+        })
+        .catch(error => {
+            console.log(error);  // 에러가 발생했을 때 콘솔에 출력합니다.
+            // 에러 처리를 수행합니다.
+        });
     };
 
     const formik = useFormik({
