@@ -1,9 +1,8 @@
 import React from 'react';
-import Header from '../components/Main/Header'
+import Header from '../components/Common/Header'
 import Contents from '../components/Main/Contents'
-import Footer from '../components/Main/Footer';
-import Login from '../components/Main/LoginBar';
-import "../scss/login.scss";
+import Footer from '../components/Common/Footer';
+
 
 const LoginPage = () => {
   

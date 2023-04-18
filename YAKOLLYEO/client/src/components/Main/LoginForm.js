@@ -5,6 +5,7 @@ import Input from './Input';
 import Button from '../Common/Button';
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
+import styles from "../../scss/loginPage.module.scss";
 
 function LoginForm(){
     const [activeLoginBtn, setActiveLoginBtn] = useState(false);
@@ -50,7 +51,7 @@ function LoginForm(){
     });
 
     return(
-        <form id="loginForm" className="form-signin" onSubmit={formik.handleSubmit}>
+        <form id="loginForm" className={styles["form-signin"]} onSubmit={formik.handleSubmit}>
             <Input
                 type="text"
                 name="userId"
@@ -78,17 +79,19 @@ function LoginForm(){
                         checked={formik.values.rememberMe}
                         onChange={formik.handleChange}
                     />
-                    <label className="sub_font" htmlFor="autoCompleteId">아이디 저장</label>
+                    <label className={styles.sub_font} htmlFor="autoCompleteId">아이디 저장</label>
                 </span>
-                <span className="sub_font" style={{float: "right"}}>
-                    <a className="forgot-password-txt" href="/user/login/DTPS095.do" id="find_uid">아이디</a>
-                    <a className="forgot-password-txt" href="/user/login/DTPS096.do" id="find_pw">비밀번호 찾기</a>
+                <span className={styles.sub_font} style={{float: "right"}}>
+                    <a className={styles["forgot-password-txt"]} href="/user/login/DTPS095.do" id="find_uid">아이디</a>
+                    <a className={styles["forgot-password-txt"]} href="/user/login/DTPS096.do" id="find_pw">비밀번호 찾기</a>
                 </span>
             </div>
-            <Button type="submit" text="로그인" style={{display: "block", width: "100%", marginBottom: "5px"}} disabled={activeLoginBtn}/>
-            <Button type="button" text="회원가입" style={{display: "block", width: "100%", background:"#63a1ff", marginBottom: "5px"}}/>
+            <Button className={styles.cBtn} type="submit" text="로그인" style={{display: "block", width: "100%", marginBottom: "5px"}} disabled={activeLoginBtn}/>
+            <Button className={styles.cBtn} type="button" text="회원가입" style={{display: "block", width: "100%", background:"#63a1ff", marginBottom: "5px"}}/>
         </form>
     );
 }
+
+
 
 export default LoginForm;

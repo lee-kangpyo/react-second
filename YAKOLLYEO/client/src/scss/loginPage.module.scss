@@ -401,21 +401,21 @@
     vertical-align: middle;
 }
 
-#loginForm .sub_font, #loginForm .sub_font>a {
+.sub_font, .sub_font>a {
     font-weight: 500;
     font-size: 12px;
     line-height: 16px;
 }
 
-#loginForm .sub_font>a {
+.sub_font>a {
     color: #9395a6;
     text-decoration: none;
 }
 
-#loginForm .sub_font>a:hover {
+.sub_font>a:hover {
     font-weight: bold;
 }
-#loginForm>button {
+.cBtn {
     font-family: pretendard;
     font-style: normal;
     font-weight: 700;

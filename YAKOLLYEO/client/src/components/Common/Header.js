@@ -1,18 +1,22 @@
 import React, { useState } from 'react';
 
 import logo from '../../img/login/logo.png'
+import Search from './Search';
+import styles from "../../scss/loginPage.module.scss";
 
 
 
-function Header(){
+function Header({isSearchEl=false}){
+
     return(
-        <div className='header'>
-            <div className="header_contents">
+        <div className={styles.header}>
+            <div className={styles.header_contents}>
                 <img
                 alt="logo"
                 className="logo"
                 src={logo}
                 />
+                {(isSearchEl)?<Search />:false}
             </div>
         </div>
     )

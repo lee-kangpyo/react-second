@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "../../scss/loginPage.module.scss";
 
 const defaultStyle = {
     display: "flex",
@@ -22,8 +23,8 @@ function Input({ label, name, type, value, onChange, error, style }) {
   const combinedStyle = style ? Object.assign({}, defaultStyle, style) : defaultStyle;
 
   return (
-    <div className="input-box">
-      <label className="input_label" htmlFor={name}>{label}</label>
+    <div className={styles["input-box"]}>
+      <label className={styles.input_label} htmlFor={name}>{label}</label>
       <input style={combinedStyle}
         id={name}
         name={name}
@@ -31,7 +32,7 @@ function Input({ label, name, type, value, onChange, error, style }) {
         value={value}
         onChange={onChange}
       />
-      {error && <span className="error">{error}</span>}
+      {error && <span className={styles.error}>{error}</span>}
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import React from "react";
 
-function Button({ text, onClick, disabled, style, type }) {
+function Button({ text, onClick, disabled, style, type, className }) {
   return (
     <button
       type={type}
@@ -15,6 +15,7 @@ function Button({ text, onClick, disabled, style, type }) {
       }}
       onClick={onClick}
       disabled={disabled}
+      className={className}
     >
       {text}
     </button>
