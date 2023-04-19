@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../components/Common/Header'
 import Contents from '../components/Main/Contents'
 import Footer from '../components/Common/Footer';
+import '../scss/common.scss'
 
 
 const LoginPage = () => {

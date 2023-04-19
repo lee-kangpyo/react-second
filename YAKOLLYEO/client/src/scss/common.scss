@@ -1,0 +1,63 @@
+@import "stylesheet.scss";
+
+.bg-wh_0 {
+    display: inline-block;
+    width: 194px;
+    height: 25px;
+    background: url(/img/login/landing.png) -96px -39px;
+    background-size: 376px 288px;
+}
+.bg-wh_1 {
+    background: url(/img/login/landing.png) -5px -86px;
+    background-size: 376px 288px;
+}
+.bg-wh_2 {
+    background: url(/img/login/landing.png) -300px -5px;
+    background-size: 376px 288px;
+}
+.bg-wh_3 {
+    background: url(/img/login/landing.png) -87px -86px;
+    background-size: 376px 288px;
+}
+.bg-wh_4 {
+    background: url(/img/login/landing.png) -168px -86px;
+    background-size: 376px 288px;
+}
+.bg-yak_0 {
+    display: inline-block;
+    width: 194px;
+    height: 25px;
+    background: url(/img/login/landing.png) -96px -5px;
+    background-size: 376px 288px;
+}
+.bg-yak_1 {
+    background: url(/img/login/landing.png) -5px -168px;
+    background-size: 376px 288px;
+}
+.bg-yak_2 {
+    background: url(/img/login/landing.png) -87px -168px;
+    background-size: 376px 288px;
+}
+.bg-yak_3 {
+    background: url(/img/login/landing.png) -5px -5px;
+    background-size: 376px 288px;
+}
+.bg-yak_4 {
+    background: url(/img/login/landing.png) -169px -168px;
+    background-size: 376px 288px;
+}
+
+.H4{
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height, or 125% */
+    
+    letter-spacing: -0.02em;
+}
+
+.f_g2{
+    color: $gray2;
+}

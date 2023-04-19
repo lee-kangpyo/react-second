@@ -1,0 +1,17 @@
+@import "stylesheet.scss";
+
+.sideBar{
+    background-color: black;
+    width: 300px;
+    height: 100%;
+}
+
+.home_container{
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.main{
+    width: 100%;
+}
