@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from "../../scss/loginPage.module.scss";
+import { MdOutlineSearch } from 'react-icons/md' ; 
 
 function Search(){
     const [LabelShow, setLabelShow] = useState(true)
@@ -19,8 +20,9 @@ function Search(){
                         value={text}
                         onChange={onChange}
                     />
-                    <button>버튼</button>
+                    <MdOutlineSearch />
                     {(LabelShow)?<label htmlFor='searchWrd' className={`H4 f_g2 ${styles.search_el_ph}`}>제조사, 상품명 검색</label>:false}
+                    
                 </div>
             </div>
             <div style={{width:"74px"}}></div>
