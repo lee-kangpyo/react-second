@@ -57,7 +57,28 @@
     
     letter-spacing: -0.02em;
 }
+html{
+    min-width: 1200px;
+}
+body{
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height, or 125% */
+    
+    letter-spacing: -0.02em;
+}
 
 .f_g2{
     color: $gray2;
+}
+
+.bold{
+    font-weight: 700;
+}
+
+.pointer{
+    cursor: pointer;
 }

@@ -10,9 +10,9 @@ function Header({isSearchEl=false}){
         <div className={styles.header}>
             <div className={styles.header_contents}>
                 <img
-                alt="logo"
-                className={styles.logo}
-                src={logo}
+                    alt="logo"
+                    className={styles.logo}
+                    src={logo}
                 />
                 {(isSearchEl)?<Search />:false}
             </div>

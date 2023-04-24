@@ -1,4 +1,3 @@
-
 @import "stylesheet.scss";
 
 .header {
@@ -486,4 +485,11 @@
 
 button:active {
     box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5);
+}
+
+.search_icon{
+    color: $mint;
+    font-size: 24px;
+    float: right;
+    cursor: pointer;
 }
