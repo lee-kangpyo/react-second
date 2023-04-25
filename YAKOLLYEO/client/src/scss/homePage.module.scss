@@ -68,3 +68,17 @@
     align-items: center;
     justify-content: space-between;
 }
+
+.menu_el:hover{
+    color: $mint;
+    cursor: pointer;
+}
+
+.menu_shrink{
+    font-size: 8px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 70px;
+    text-align: center;
+}
