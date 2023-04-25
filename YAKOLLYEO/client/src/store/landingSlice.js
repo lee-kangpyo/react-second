@@ -71,6 +71,6 @@ let landing = createSlice({
 })
 
 //외부에서 reducer를 사용하기위해 export
-export let { check } = landing.actions
+export let { check } = landing.actions;
 
 export default landing;

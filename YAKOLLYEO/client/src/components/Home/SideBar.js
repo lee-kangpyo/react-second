@@ -3,18 +3,23 @@ import styles from "../../scss/homePage.module.scss";
 import UserComponent from './UserComponent';
 import MenuList from './MenuList';
 import { BsChevronBarLeft, BsChevronBarRight } from "react-icons/bs";
+import { useSelector, useDispatch  } from 'react-redux';
+import { changeShrinkState } from '../../store/menubarSlice';
 
 function SideBar({shrinkWidth, width}){
+    const dispatch = useDispatch();
+
     const [sideBarWidth, setSideBarWidth] = useState(width); 
-    const [isShrinked, setIsShrinked] = useState(false); 
+    const isShrinked = useSelector((state) => state.isShrinked);
+    
 
     const handleShrink = () => {
         if(isShrinked){
             setSideBarWidth(width); 
-            setIsShrinked(false);
+            dispatch(changeShrinkState(false))
         }else{
             setSideBarWidth(shrinkWidth); 
-            setIsShrinked(true);
+            dispatch(changeShrinkState(true))
         }
     }
 
@@ -23,7 +28,7 @@ function SideBar({shrinkWidth, width}){
             <div className={styles.sideBar} style={{width:sideBarWidth, transition:'width 0.3s ease'}}>
                 <UserComponent />
                 <hr className={styles.hr_style} style={{height:"3px"}}/>
-                <MenuList isShrinked={isShrinked}/>
+                <MenuList/>
                 <button onClick={handleShrink}>{(isShrinked)?<BsChevronBarRight/>:<BsChevronBarLeft/>}</button>
             </div>
         </>

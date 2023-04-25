@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from "../../scss/homePage.module.scss";
-
 import { TfiAngleRight } from "react-icons/tfi";
+import { useSelector } from 'react-redux';
 
-function Menu({isShrinked, isUnderLine, text, icon}){
-    console.log(icon)
+function Menu({isUnderLine, text, icon}){
+    const isShrinked = useSelector((state)=>state.isShrinked)
     return(
         <>
             {   // 사이드바 좁게 넓게
