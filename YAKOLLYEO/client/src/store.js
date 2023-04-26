@@ -6,6 +6,7 @@ import menubar from "./store/menubarSlice";
 export default configureStore({
     reducer:{
         "landing":landing.reducer,
-        "isShrinked":menubar.isShrinked
+        "isShrinked":menubar.isShrinked,
+        "menuList":menubar.menuList
     }
 })

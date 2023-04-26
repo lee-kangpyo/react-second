@@ -3,6 +3,9 @@
 .sideBar{
     background-color: #353644;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .hr_style{
@@ -19,6 +22,12 @@
 }
 .main{
     width: 100%;
+}
+.main_container{
+    padding: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .sideBar_Container{
     text-align: left;
@@ -41,6 +50,9 @@
 .user_title{
     font-size: 14px;  
     margin-bottom: 16px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 .user_sub_f{
     font-weight: 500;
@@ -63,10 +75,11 @@
 .menu_el{
     font-weight: 600;
     color: #B7B9C9;
-    padding: 16px 0px;
+    padding: 8px 0px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-size: 14px;
 }
 
 .menu_el:hover{
@@ -81,4 +94,69 @@
     overflow: hidden;
     width: 70px;
     text-align: center;
+}
+
+.shrink_el{
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    text-align: right;
+    padding: 8px 0px;
+}
+
+.bank_info{
+    background-color: #424351;
+    padding: 16px;
+    border-radius: 16px;
+    color: white;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.bank_info .bank_Icon{
+    width: 50px;
+    height: 16px; 
+    margin-right:8px;
+}
+
+.bank_info > .bk{
+    font-size:10px;
+    display: flex;
+    align-items: center;
+}
+
+.banner{
+    width:680px; 
+    height:324px;
+    margin-right: 24px;
+    white-space: nowrap;
+    border-radius: 24px;
+    overflow: hidden;
+}
+.banner > div {
+    position: relative;
+    /*right: 680px*/
+}
+.banner > div > img{
+    width: 680px;
+    height: 324px;
+    object-fit: cover;
+    border-radius: 24px;
+
+    display: inline;
+}
+.banner > .controller{
+    position: relative;
+    bottom: 40px;
+    width: 81px;
+    height: 28px;
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 19px;
+    line-height: 24px;
+}
+
+.yak_rank{
+    height: 324px;
+    width: 328px;
 }
