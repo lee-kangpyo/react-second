@@ -8,7 +8,7 @@ function Search(){
     const [text, setText] = useState("")
     const onChange = (e) => {
         setText(e.target.value);
-        (e.target.value == "")?setLabelShow(true):setLabelShow(false)
+        (e.target.value === "")?setLabelShow(true):setLabelShow(false)
     }
     return (
         <>

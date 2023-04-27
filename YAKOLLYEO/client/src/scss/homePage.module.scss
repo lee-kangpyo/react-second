@@ -22,12 +22,14 @@
 }
 .main{
     width: 100%;
+    background-color: #F5F5F5;
 }
 .main_container{
-    padding: 100px;
+    padding: 15px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    min-width: 1032px;
 }
 .sideBar_Container{
     text-align: left;
@@ -142,21 +144,39 @@
     height: 324px;
     object-fit: cover;
     border-radius: 24px;
-
     display: inline;
 }
 .banner > .controller{
     position: relative;
     bottom: 40px;
-    width: 81px;
+    width: 92px;
     height: 28px;
     display: inline-block;
     background: rgba(0, 0, 0, 0.5);
     border-radius: 19px;
     line-height: 24px;
+    font-size: 12px;
+    font-weight: 500;
+    color:rgba(255, 255, 255, 0.5)
 }
+
+.banner .cw{
+    color:rgba(255, 255, 255, 1)
+}
+
+.vm{
+    vertical-align: middle;
+    margin: 0px 8px;
+    cursor: pointer;
+}
+
 
 .yak_rank{
     height: 324px;
     width: 328px;
+    border-radius: 24px;
+    background-color: $white;
+}
+.yak_rank > div{
+    padding: 24px;
 }

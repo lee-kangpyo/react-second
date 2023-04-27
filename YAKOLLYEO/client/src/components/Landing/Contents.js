@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ContentBox from './ContentBox';
 import LoginComponent from './LoginBar';
 import NewsLetter from './NewsLetter';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import styles from "../../scss/loginPage.module.scss";
 
 
@@ -20,7 +20,7 @@ function Contents({frame}){
     return(
         <div className={frameStyle}>
             <div className={styles.main_contnet}>
-                {(frame == "top_frame")?<LoginComponent/>:null}
+                {(frame === "top_frame")?<LoginComponent/>:null}
                 <div className={styles.title_font}>{obj.title}<span className={styles.mid_line}></span></div>
                 <div className={`${styles.title_font} ${styles.bold}`}>{obj.title2}<i className={obj.icon}><span className={styles.blind}>{obj.iconInfo}</span></i></div>
                 <div style={{ marginBottom: "32px" }}> 
@@ -28,7 +28,7 @@ function Contents({frame}){
                         return <ContentBox key={idx} idx={idx} contents={item}/>
                     })}
                 </div>
-                {(frame == "bottom_frame")?<NewsLetter/>:null}
+                {(frame === "bottom_frame")?<NewsLetter/>:null}
             </div>
         </div>
 

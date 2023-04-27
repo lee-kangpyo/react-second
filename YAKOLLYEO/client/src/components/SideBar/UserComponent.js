@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from "../../scss/homePage.module.scss";
 import { IoSettingsSharp } from "react-icons/io5";
 import { MdLogout } from "react-icons/md";
