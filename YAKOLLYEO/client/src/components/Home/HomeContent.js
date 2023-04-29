@@ -3,6 +3,7 @@ import styles from "../../scss/homePage.module.scss";
 import SideBar from '../SideBar/SideBar';
 
 import Banner from './Banner';
+import RankList from './RankList';
 
 function HomeContent(){
     return(
@@ -11,9 +12,7 @@ function HomeContent(){
             <div className={styles.main}>
                 <div className={styles.main_container}>
                     <Banner />
-
-                    
-                
+                    <RankList/>
                 </div>
 
             </div>

@@ -176,7 +176,58 @@
     width: 328px;
     border-radius: 24px;
     background-color: $white;
+    
 }
 .yak_rank > div{
     padding: 24px;
+}
+
+.yak_rank > div > div{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+ul.tab {
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+ul.tab > li {
+    font-weight: 700;
+    font-size: 16px;
+    margin: 0 8px 0 0;
+    padding: 0 0 0 0;
+    border : 0;
+    float: left;
+    color: rgba(147, 149, 166, 1);
+}
+
+ul.tab > li.active {
+    font-weight: 700;
+    font-size: 16px;
+    color: #353644;
+    border-bottom: 2px solid #353644;
+    padding-bottom: 4px;
+}
+
+.more_show{
+    color:rgba(98, 100, 116, 1)
+}
+
+.rnk_lst{
+    font-weight: 700;
+    font-size: 12px;
+    margin: 4px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rnk_lst_no{
+    color: #B7B9C9;
+    margin-right: 4px;
+}
+.rnk_lst_stat{
+    color: #D9D9D9;
 }
