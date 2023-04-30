@@ -8,6 +8,7 @@ var indexRouter = require('./routes/index');
 var testRouter = require('./routes/test');
 var apiRouter = require('./routes/api');
 var loginRouter = require('./routes/login')
+var userRouter = require('./routes/user')
 
 var redisClient = require('./util/redis');
 
@@ -27,8 +28,9 @@ app.use(cors(corsOptions))
 
 // 모듈로 분리
 app.use('/', indexRouter);
-app.use('/login', loginRouter);
-app.use('/test', testRouter);
+app.use('/user', userRouter);
+//app.use('/login', loginRouter);
+//app.use('/test', testRouter);
 app.use('/api', apiRouter);
 
 

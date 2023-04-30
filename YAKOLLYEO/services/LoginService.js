@@ -5,6 +5,7 @@ const { login } = require("../mapper/login");
 
 exports.Login = async (params) => {
     logger.info('LoginService.Login 호출됨.');
+    /*
     const result = await execSql(login, params);
     logger.info(JSON.stringify(result.recordsets));
 
@@ -14,4 +15,5 @@ exports.Login = async (params) => {
     }
 
     return reresult;
+    */
 };

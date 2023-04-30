@@ -6,14 +6,17 @@ const sqlSession = require('../config/sqlSession');
 
 exports.getTestYak = async (params) => {
     logger.info("TestService.getTestYak 호출됨.")
+    /*
     const result = await sqlSession.query("user.getList", params)
     logger.info(result)
     return result
+    */
 }
 
 
 // mybatis 사용하지 않을때
 exports.getTestYak2 = async (params) => {
+    /*
     logger.info("TestService.getTestYak2 호출됨.")
     var cstCl = params.cstCl
     try{
@@ -27,4 +30,5 @@ exports.getTestYak2 = async (params) => {
         logger.info(err)
         throw Error(err)
     }
+    */
 }
