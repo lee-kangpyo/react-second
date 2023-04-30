@@ -10,8 +10,6 @@ function Footer(){
         window.open('https://www.ftc.go.kr/bizCommPop.do?wrkr_no=8508701176','mywin','top=0,width=780,height=860');
     };
 
-    
-
     const openInfo = (id) =>{
         axios.post("/api/v1/clkLandingBtn", { id: id } ).then(res => {
             console.log(res.data);
