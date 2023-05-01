@@ -5,9 +5,9 @@ const app = express();
 const logger = require("./logger");
 
 var indexRouter = require('./routes/index');
-var testRouter = require('./routes/test');
-var apiRouter = require('./routes/api');
-var loginRouter = require('./routes/login')
+//var testRouter = require('./routes/test');
+//var apiRouter = require('./routes/api');
+//var loginRouter = require('./routes/login')
 var userRouter = require('./routes/user')
 
 var redisClient = require('./util/redis');
@@ -31,7 +31,7 @@ app.use('/', indexRouter);
 app.use('/user', userRouter);
 //app.use('/login', loginRouter);
 //app.use('/test', testRouter);
-app.use('/api', apiRouter);
+//app.use('/api', apiRouter);
 
 
 // 리액트 환경 변수

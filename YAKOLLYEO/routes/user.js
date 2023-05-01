@@ -1,31 +1,11 @@
 const express = require('express')
 var router = express.Router();
 const logger = require("../logger");
+const UserController = require("../src/user/controller/UserController.js")
 
-const User = require('../model/user.js');
+router.get("/create", UserController.createUser);
+router.get("/id/:id", UserController.findUser);
 
-router.get('/create', (req, res) => {
-    logger.info("create")
-    const newUser = new User({
-        id: 'sale222',
-        password: '2',
-        email: 'john.doe@example.com',
-        name: 'john',
-    });
-      
-    newUser.save()
-    .then(user => {
-        logger.info(user.name + " saved to users collection.");
-        logger.info(user.id + " saved to users collection.");
-        logger.info(user.email + " saved to users collection.");
-        res.send("create");
-    })
-    .catch(err => {
-        logger.error(err);
-        res.send("err");
-    });
-    
-});
 
 
 
