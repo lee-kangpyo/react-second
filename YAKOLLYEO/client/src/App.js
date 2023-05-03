@@ -23,10 +23,6 @@ function App() {
     axios.get('/test/getData').then((res) => {
       setServerData(res.data.value)
     })
-    // 약올려 db에서 값 받아보기
-    //axios.get('/test/getTestYak?cstCl=PH').then((res) => {
-    //  setYakollyeoData(JSON.stringify(res.data.recordset[0]))
-    //})
   }, [])
 
   return (
@@ -35,7 +31,6 @@ function App() {
         <Routes>
           <Route path='/' element={<Login/>}/>
           <Route path='/home' element={<Home/>}/>
-          
           <Route path='/test' element={<><div>{serverData}</div></>}/>
           <Route path='*' element={<NotFoundPage />} />
         </Routes>

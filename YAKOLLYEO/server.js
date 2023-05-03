@@ -4,17 +4,18 @@ const app = express();
 
 const logger = require("./logger");
 
+var redisClient = require('./util/redis');
+var mongoose = require('./util/mongooseDB.js');
+mongoose();
+
 var indexRouter = require('./routes/index');
 //var testRouter = require('./routes/test');
 //var apiRouter = require('./routes/api');
 //var loginRouter = require('./routes/login')
 var userRouter = require('./routes/user')
 
-var redisClient = require('./util/redis');
-
 app.listen(8080, () => { logger.info("Server listening on port 8080"); })
-const db = require('./config/mongooseDB.js');
-db();
+
 // 유저가 보낸 array/object 데이터 출력해보기 위해 필요
 app.use(express.json());
 // 다른 도메인 주소끼리 ajax 요청 주고 받을때 필요

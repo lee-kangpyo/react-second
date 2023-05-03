@@ -1,5 +1,6 @@
 const logger = require("../../../logger");
 const User = require('../model/user.js');
+const jwt = require("../../../util/jwt-util")
 
 exports.createUser = async (params) => {
     logger.info('UserService.createUser 호출됨.');
@@ -39,19 +40,22 @@ exports.findUser = async (id) => {
 }
 
 exports.loginUser = async (params) => {
-    logger.info('LoginService.loginUser 호출됨.');
-    logger.info(params);
-    /*
-    const result = await execSql(login, params);
-    logger.info(JSON.stringify(result.recordsets));
+    logger.info('UserService.loginUser 호출됨.');
+    let result = false;
+    await User.find({ id:params.userId, password:params.password }, {id:1,name:1})
+    .then(user => {
+        if (user) {
+            logger.info(user);
+            result = true;
 
-    let reresult = {
-        totalCount:result.recordset.length,
-        result:result.recordset
-    }
-
-    return reresult;
-    */
+            const accessToken = jwt.sign(user[0])
+            const ver =jwt.verify(accessToken);
+        }
+    })
+    .catch(err => {
+        logger.error(err)
+    })
+    return result;
 };
 
 

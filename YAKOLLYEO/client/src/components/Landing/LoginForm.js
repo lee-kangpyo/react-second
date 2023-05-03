@@ -21,7 +21,7 @@ function LoginForm(){
         userId: Yup.string().matches(/^[a-zA-Z0-9]+$/, '영어와 숫자만 입력 가능합니다.').required('아이디를 입력해주세요.'),
         password: Yup.string().required('비밀번호를 입력해주세요.')
     });
-
+    
     const onSubmit = values => {
         setActiveLoginBtn(true);
         // 서버에 로그인 요청을 보낸다.
@@ -29,8 +29,7 @@ function LoginForm(){
         .then(response => {
             //console.log(response.data);  // 서버에서 보낸 응답 데이터를 콘솔에 출력합니다.
             // 상태를 업데이트하거나, 리다이렉트 등의 작업을 수행합니다.
-            if(response.data.totalCount == 1){
-                console.log("로그인 완료")
+            if(response.data){
                 navigate("/home", {replace:true})
             }else{
                 console.log("로그인 실패")
@@ -78,6 +77,7 @@ function LoginForm(){
                         name="rememberMe"
                         checked={formik.values.rememberMe}
                         onChange={formik.handleChange}
+                        style={{verticalAlign:"middle"}}
                     />
                     <label className={styles.sub_font} htmlFor="autoCompleteId">아이디 저장</label>
                 </span>
@@ -91,7 +91,5 @@ function LoginForm(){
         </form>
     );
 }
-
-
 
 export default LoginForm;
