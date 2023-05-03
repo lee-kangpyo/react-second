@@ -25,7 +25,7 @@ function LoginForm(){
     const onSubmit = values => {
         setActiveLoginBtn(true);
         // 서버에 로그인 요청을 보낸다.
-        axios.post('/login', values)
+        axios.post('/user/loginUser', values)
         .then(response => {
             //console.log(response.data);  // 서버에서 보낸 응답 데이터를 콘솔에 출력합니다.
             // 상태를 업데이트하거나, 리다이렉트 등의 작업을 수행합니다.

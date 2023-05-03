@@ -7,6 +7,7 @@ const UserService = require('../service/UserService.js')
 exports.createUser = async (req, res, next) => {
     logger.info("UserController.createUser - get /create")
     const result = await UserService.createUser(req.body);
+    logger.info(result);
     res.send(result);
 };
 
@@ -16,9 +17,9 @@ exports.findUser = async (req, res, next) => {
     res.send(result);
 }
 
-exports.login = async (req, res, next) => {
-    logger.info("LoginController.login - post /login")
-    const result = await LoginService.Login(req.body);
+exports.loginUser = async (req, res, next) => {
+    logger.info("LoginController.loginUser - post //loginUser")
+    const result = await UserService.loginUser(req.body);
     res.json(result);
 };
 
