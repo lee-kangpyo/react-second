@@ -11,5 +11,4 @@ module.exports = () => {
   }
   connect();
   mongoose.connection.on('disconnected', connect);
-  //require('../src/model/user.js'); // user.js는 나중에 만듭니다.
 };
