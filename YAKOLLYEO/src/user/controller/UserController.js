@@ -19,7 +19,7 @@ exports.findUser = async (req, res, next) => {
 
 exports.loginUser = async (req, res, next) => {
     logger.info("LoginController.loginUser - post //loginUser")
-    const result = await UserService.loginUser(req.body);
+    const result = await UserService.loginUser(req.body, res);
     res.send(result);
 };
 

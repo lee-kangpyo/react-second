@@ -1,6 +1,7 @@
 const logger = require("../../../logger");
 const User = require('../model/user.js');
-const jwt = require("../../../util/jwt-util")
+const jwt = require("../../../util/jwt-util");
+const redis = require("../../../util/redis");
 
 exports.createUser = async (params) => {
     logger.info('UserService.createUser 호출됨.');
@@ -39,21 +40,33 @@ exports.findUser = async (id) => {
     })
 }
 
-exports.loginUser = async (params) => {
+exports.loginUser = async (params, response) => {
     logger.info('UserService.loginUser 호출됨.');
     let result = false;
     await User.find({ id:params.userId, password:params.password }, {id:1,name:1})
-    .then(user => {
+    .then( async users => {
+        const user = users[0]
         if (user) {
             logger.info(user);
             result = true;
 
-            const accessToken = jwt.sign(user[0])
-            const ver =jwt.verify(accessToken);
+            const accTk = jwt.sign(user);
+            //const ver =jwt.verify(accToken);
+            const refTk = jwt.refresh();
+            console.log(user.id)
+            console.log(refTk);
+            await redis.set(user.id, refTk);
+
+            response.setHeader('Content-Type','application/json; charset=utf-8');
+            response.setHeader('Authorization', 'Bearer ' + accTk);
+            response.setHeader('Refresh', 'Bearer ' + refTk);
+        }else{
+            logger.error("로그인 에러 : 해당하는 유저가 없음 userId : "+params.userId)
         }
     })
     .catch(err => {
-        logger.error(err)
+        logger.error(err.message);
+        logger.error(err.stack);
     })
     return result;
 };

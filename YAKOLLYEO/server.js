@@ -4,7 +4,7 @@ const app = express();
 
 const logger = require("./logger");
 
-var redisClient = require('./util/redis');
+
 var mongoose = require('./util/mongooseDB.js');
 mongoose();
 
