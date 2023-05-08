@@ -3,11 +3,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const redisClient = redis.createClient({
-    socket: {
-        port: process.env.REDIS_PORT,
-        host: process.env.REDIS_HOST,
-        password: process.env.REDIS_PASSWORD,
-      },
+  url: process.env.REDIS_URL
 });
 
 //redisClient.on('connect', () => console.log('Connected to Redis!'));
@@ -19,7 +15,6 @@ redisClient.on('connect', () => {
   });
 
 redisClient.connect();
-
 
 async function version4test() {
     await redisClient.set('key', '345');
