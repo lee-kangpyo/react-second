@@ -51,12 +51,9 @@ exports.loginUser = async (params, response) => {
             result = true;
 
             const accTk = jwt.sign(user);
-            //const ver =jwt.verify(accToken);
             const refTk = jwt.refresh();
-            console.log(user.id)
-            console.log(refTk);
             await redis.set(user.id, refTk);
-
+            
             response.setHeader('Content-Type','application/json; charset=utf-8');
             response.setHeader('Authorization', 'Bearer ' + accTk);
             response.setHeader('Refresh', 'Bearer ' + refTk);
