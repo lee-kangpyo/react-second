@@ -7,11 +7,13 @@ import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
 import styles from "../../scss/loginPage.module.scss";
 
-import { cookie } from 'react-cookie';
+import { useCookies  } from 'react-cookie';
 
 function LoginForm(){
     const [activeLoginBtn, setActiveLoginBtn] = useState(false);
     const navigate = useNavigate();
+
+    const [cookies, setCookie] = useCookies(); // 쿠키 훅 
 
     const initialValues = {
         userId: '',
@@ -33,21 +35,13 @@ function LoginForm(){
             // 상태를 업데이트하거나, 리다이렉트 등의 작업을 수행합니다.
             if(response.data){
                 // accesstoken, refreshtoken을 저장하든지 해야함...
-                console.log(response)
-                localStorage.setItem("Access", response.headers.authorization)
-                sessionStorage.setItem("refresh", response.headers.refresh)
-                console.log(localStorage.getItem('Access'));
-                console.log(sessionStorage.getItem('refresh'));
-
-                cookie.save('refresh', response.headers.refresh, {
+                sessionStorage.setItem("Access", response.headers.authorization)
+                setCookie('refresh', response.headers.refresh, {
                     path : '/',
-                    secure : true,
-                    httpOnly : true
-                });
-                console.log("cookie"+cookie.get("refresh"))
-
-                
-                //navigate("/home", {replace:true})
+                    //httpOnly : true,
+                    //secure: true,
+                })
+                navigate("/home", {replace:true})
             }else{
                 console.log("로그인 실패")
             }
