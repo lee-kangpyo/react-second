@@ -2,7 +2,6 @@ const express = require('express');
 const logger = require("../logger");
 //const TestService = require('../services/TestService')
 
-
 //mybatis 사용
 exports.clkLandingBtn =  (req, res, next) => {
     logger.info("ApiController.clkLandingBtn - post /api/v1/clkLandingBtn")

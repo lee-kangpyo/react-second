@@ -16,3 +16,9 @@ turup/node_modules
 turup/logs
 turup/.env
 turup/build
+
+API/static/jdbc.js
+API/node_modules
+API/logs
+API/.env
+API/build
